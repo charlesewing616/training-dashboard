@@ -1,0 +1,1195 @@
+{
+ "generated": "2026-10-24T11:49+00:00",
+ "today": "2026-10-24",
+ "week_no": 1,
+ "race": {
+  "name": "Ironman 70.3 Oman",
+  "place": "Muscat",
+  "date": "2027-02-06",
+  "goal": "Sub-5:30",
+  "floor": "Sub-6:00",
+  "estimate": [
+   {
+    "leg": "Swim",
+    "distance": "1.9 km",
+    "estimate": "38\u201342 min"
+   },
+   {
+    "leg": "Transitions",
+    "distance": "",
+    "estimate": "6\u20138 min"
+   },
+   {
+    "leg": "Bike",
+    "distance": "90 km",
+    "estimate": "2:45\u20132:55",
+    "note": "175\u2013185 W (75\u201380% FTP)"
+   },
+   {
+    "leg": "Run",
+    "distance": "21.1 km",
+    "estimate": "1:40\u20131:50"
+   },
+   {
+    "leg": "Total",
+    "distance": "",
+    "estimate": "5:20\u20135:35"
+   }
+  ]
+ },
+ "zones": {
+  "ftp_w": 232,
+  "ftp_tested": "2026-10-20",
+  "five_k": "19:57",
+  "power": [
+   {
+    "zone": "Z1 Recovery",
+    "range": "<128 W"
+   },
+   {
+    "zone": "Z2 Endurance",
+    "range": "129\u2013174 W"
+   },
+   {
+    "zone": "Z3 Tempo",
+    "range": "175\u2013209 W"
+   },
+   {
+    "zone": "Sweet spot",
+    "range": "204\u2013218 W"
+   },
+   {
+    "zone": "Z4 Threshold",
+    "range": "210\u2013244 W"
+   },
+   {
+    "zone": "Z5 VO2 max",
+    "range": "245\u2013278 W"
+   }
+  ]
+ },
+ "phases": [
+  {
+   "name": "Base",
+   "start": "2026-10-19",
+   "end": "2026-11-29"
+  },
+  {
+   "name": "Flex build",
+   "start": "2026-11-30",
+   "end": "2026-12-27"
+  },
+  {
+   "name": "Recovery",
+   "start": "2026-12-28",
+   "end": "2027-01-03"
+  },
+  {
+   "name": "Peak",
+   "start": "2027-01-04",
+   "end": "2027-01-24"
+  },
+  {
+   "name": "Taper",
+   "start": "2027-01-25",
+   "end": "2027-02-06"
+  }
+ ],
+ "weeks_plan": [
+  {
+   "week": 1,
+   "start": "2026-10-19",
+   "phase": "Base",
+   "thursday": "Standard session (replaces run test)",
+   "saturday": "2 hrs easy",
+   "notes": "Bike FTP test done Tue 20 Oct: 232 W"
+  },
+  {
+   "week": 2,
+   "start": "2026-10-26",
+   "phase": "Base",
+   "thursday": "60 min total, Shorter session",
+   "saturday": "2.5 hrs",
+   "notes": ""
+  },
+  {
+   "week": 3,
+   "start": "2026-11-02",
+   "phase": "Base",
+   "thursday": "70 min total, Shorter session",
+   "saturday": "2.75 hrs",
+   "notes": ""
+  },
+  {
+   "week": 4,
+   "start": "2026-11-09",
+   "phase": "Base (recovery)",
+   "thursday": "50 min total, Shorter session",
+   "saturday": "2 hrs",
+   "notes": "Lighter week"
+  },
+  {
+   "week": 5,
+   "start": "2026-11-16",
+   "phase": "Base",
+   "thursday": "75 min total, Standard session",
+   "saturday": "3 hrs + 10 min run",
+   "notes": "First brick"
+  },
+  {
+   "week": 6,
+   "start": "2026-11-23",
+   "phase": "Base",
+   "thursday": "80 min total, Standard session",
+   "saturday": "3 hrs + 15 min run",
+   "notes": ""
+  },
+  {
+   "week": 7,
+   "start": "2026-11-30",
+   "phase": "Flex build",
+   "thursday": "85 min total, Standard session",
+   "saturday": "3.25 hrs + 15 min run",
+   "notes": "FTP retest"
+  },
+  {
+   "week": 8,
+   "start": "2026-12-07",
+   "phase": "Flex build",
+   "thursday": "90 min total, Standard session",
+   "saturday": "3.5 hrs + 20 min run",
+   "notes": "Race-power blocks in the ride"
+  },
+  {
+   "week": 9,
+   "start": "2026-12-14",
+   "phase": "Flex build",
+   "thursday": "90 min total, Standard session",
+   "saturday": "3.5 hrs + 20 min run",
+   "notes": "Swim starts, 1 a week; CSS test"
+  },
+  {
+   "week": 10,
+   "start": "2026-12-21",
+   "phase": "Flex build",
+   "thursday": "85 min total, Standard session",
+   "saturday": "3 hrs + 20 min run",
+   "notes": "Christmas: minimum week likely"
+  },
+  {
+   "week": 11,
+   "start": "2026-12-28",
+   "phase": "Recovery",
+   "thursday": "60 min easy, no tempo",
+   "saturday": "2 hrs",
+   "notes": "The planned buffer"
+  },
+  {
+   "week": 12,
+   "start": "2027-01-04",
+   "phase": "Peak",
+   "thursday": "95 min total, Standard session",
+   "saturday": "4 hrs + 30 min run",
+   "notes": "Swims go to 2 a week"
+  },
+  {
+   "week": 13,
+   "start": "2027-01-11",
+   "phase": "Peak",
+   "thursday": "100 min total, Standard session",
+   "saturday": "4.5 hrs + 30 min run",
+   "notes": "FTP retest Wed"
+  },
+  {
+   "week": 14,
+   "start": "2027-01-18",
+   "phase": "Peak",
+   "thursday": "100 min total, Standard session",
+   "saturday": "4 hrs, 2 \u00d7 45 min at race power + 40 min run",
+   "notes": "Race rehearsal: kit and fuelling"
+  },
+  {
+   "week": 15,
+   "start": "2027-01-25",
+   "phase": "Taper",
+   "thursday": "75 min total, Shorter session",
+   "saturday": "2.5 hrs + 20 min run",
+   "notes": "Heat prep"
+  },
+  {
+   "week": 16,
+   "start": "2027-02-01",
+   "phase": "Race week",
+   "thursday": "40 min easy with strides, skip the club",
+   "saturday": "1 hr with race-pace efforts",
+   "notes": "Race Sat 6 Feb"
+  }
+ ],
+ "this_week": {
+  "week": 1,
+  "start": "2026-10-19",
+  "status": "confirmed",
+  "days": [
+   {
+    "day": "Mon",
+    "date": "2026-10-19",
+    "session": "Easy run",
+    "target": "Easy, conversational",
+    "tier": "C",
+    "done": [
+     {
+      "sport": "run",
+      "minutes": 26,
+      "km": 5.2
+     }
+    ]
+   },
+   {
+    "day": "Tue",
+    "date": "2026-10-20",
+    "session": "Bike FTP test (Zwift Standard)",
+    "target": "20 min all-out, paced evenly",
+    "tier": "B",
+    "done": []
+   },
+   {
+    "day": "Wed",
+    "date": "2026-10-21",
+    "session": "Gym: legs and back",
+    "target": "Moderate on legs",
+    "tier": "C",
+    "done": []
+   },
+   {
+    "day": "Thu",
+    "date": "2026-10-22",
+    "session": "Long run",
+    "target": "60 min easy",
+    "tier": "A",
+    "done": [
+     {
+      "sport": "run",
+      "minutes": 56,
+      "km": 10.3
+     }
+    ]
+   },
+   {
+    "day": "Fri",
+    "date": "2026-10-23",
+    "session": "Gym: upper, back, shoulders",
+    "target": "Legs light",
+    "tier": "C",
+    "done": []
+   },
+   {
+    "day": "Sat",
+    "date": "2026-10-24",
+    "session": "Long ride",
+    "target": "2 hrs at 129\u2013174 W, 80\u201390 rpm",
+    "tier": "A",
+    "done": []
+   },
+   {
+    "day": "Sun",
+    "date": "2026-10-25",
+    "session": "Off",
+    "target": "Rest",
+    "tier": "",
+    "done": []
+   }
+  ]
+ },
+ "template": [
+  {
+   "day": "Mon",
+   "session": "Gym: legs, back, injury prevention (or bike intervals)",
+   "tier": "C"
+  },
+  {
+   "day": "Tue",
+   "session": "Club track, Standard session, controlled",
+   "tier": "B"
+  },
+  {
+   "day": "Wed",
+   "session": "Indoor bike intervals (or gym legs)",
+   "tier": "B"
+  },
+  {
+   "day": "Thu",
+   "session": "Club tempo + easy run there and home",
+   "tier": "A"
+  },
+  {
+   "day": "Fri",
+   "session": "Gym: upper, back, shoulder prep",
+   "tier": "C"
+  },
+  {
+   "day": "Sat",
+   "session": "Long ride + run off the bike",
+   "tier": "A"
+  },
+  {
+   "day": "Sun",
+   "session": "Off",
+   "tier": ""
+  }
+ ],
+ "coach": {
+  "week": 1,
+  "week_start": "2026-10-19",
+  "written": "2026-10-24",
+  "verdict": "Solid first week: FTP set, steady volume, but sleep is the limiter.",
+  "points": [
+   "FTP test: 245 W for 20 minutes, giving an FTP of 232 W. Pacing was dead even (best 10, 15 and 20 min all 245\u2013246 W) and you finished with a little left.",
+   "Cadence averaged about 68 rpm in the test. Aim for 80\u201390 rpm in bike sessions; most riders hold power better there.",
+   "Thursday's 10.3 km at 5:25/km: heart rate rose about 10 bpm at the same pace in the second half. On 4.9 hours' sleep that's expected, but easy runs should stay under about 145 bpm.",
+   "Sleep averaged 6.1 hours, with three nights under 5. Overnight HRV is 14% below your 4-week baseline. Sleep is the cheapest performance gain available right now."
+  ],
+  "focus": "Get at least 7 hours on the nights before Thursday and Saturday.",
+  "flags": [
+   "Sleep under 6.5 h average",
+   "HRV below baseline"
+  ]
+ },
+ "coach_history": [],
+ "weekly": [
+  {
+   "start": "2026-08-03",
+   "run": 1.33,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-08-10",
+   "run": 0.48,
+   "bike": 1.93,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-08-17",
+   "run": 1.37,
+   "bike": 2.4,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-08-24",
+   "run": 0.33,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-08-31",
+   "run": 1.1,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-09-07",
+   "run": 0.0,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-09-14",
+   "run": 0.85,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-09-21",
+   "run": 1.4,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-09-28",
+   "run": 0.37,
+   "bike": 1.92,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-10-05",
+   "run": 3.12,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-10-12",
+   "run": 0.15,
+   "bike": 8.08,
+   "swim": 0.0,
+   "strength": 0.0
+  },
+  {
+   "start": "2026-10-19",
+   "run": 1.37,
+   "bike": 0.0,
+   "swim": 0.0,
+   "strength": 0.0
+  }
+ ],
+ "daily": [
+  {
+   "date": "2026-09-20",
+   "sleep_h": 8.03,
+   "sleep_score": 85,
+   "hrv": 87,
+   "hrv_low": 72,
+   "hrv_high": 168,
+   "rhr": 47,
+   "readiness": 29,
+   "acute": 275,
+   "chronic": 231,
+   "weight": null,
+   "hrv_7d": null,
+   "rhr_7d": null,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-21",
+   "sleep_h": 7.95,
+   "sleep_score": 86,
+   "hrv": 110,
+   "hrv_low": 72,
+   "hrv_high": 168,
+   "rhr": 45,
+   "readiness": 55,
+   "acute": 226,
+   "chronic": 223,
+   "weight": null,
+   "hrv_7d": null,
+   "rhr_7d": null,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-22",
+   "sleep_h": 6.55,
+   "sleep_score": 79,
+   "hrv": 116,
+   "hrv_low": 72,
+   "hrv_high": 169,
+   "rhr": 45,
+   "readiness": 71,
+   "acute": 178,
+   "chronic": 219,
+   "weight": null,
+   "hrv_7d": 104.3,
+   "rhr_7d": 45.7,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-23",
+   "sleep_h": 7.27,
+   "sleep_score": 78,
+   "hrv": 107,
+   "hrv_low": 72,
+   "hrv_high": 169,
+   "rhr": 45,
+   "readiness": 56,
+   "acute": 237,
+   "chronic": 226,
+   "weight": null,
+   "hrv_7d": 105,
+   "rhr_7d": 45.5,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-24",
+   "sleep_h": 7.67,
+   "sleep_score": 87,
+   "hrv": 101,
+   "hrv_low": 73,
+   "hrv_high": 169,
+   "rhr": 45,
+   "readiness": 75,
+   "acute": 177,
+   "chronic": 219,
+   "weight": null,
+   "hrv_7d": 104.2,
+   "rhr_7d": 45.4,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-25",
+   "sleep_h": 6.18,
+   "sleep_score": 78,
+   "hrv": 95,
+   "hrv_low": 72,
+   "hrv_high": 169,
+   "rhr": 45,
+   "readiness": 45,
+   "acute": 315,
+   "chronic": 239,
+   "weight": null,
+   "hrv_7d": 102.7,
+   "rhr_7d": 45.3,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-26",
+   "sleep_h": 2.8,
+   "sleep_score": 34,
+   "hrv": 58,
+   "hrv_low": 72,
+   "hrv_high": 168,
+   "rhr": 49,
+   "readiness": 1,
+   "acute": 275,
+   "chronic": 227,
+   "weight": null,
+   "hrv_7d": 96.3,
+   "rhr_7d": 45.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-27",
+   "sleep_h": 5.48,
+   "sleep_score": 67,
+   "hrv": 80,
+   "hrv_low": 73,
+   "hrv_high": 167,
+   "rhr": 47,
+   "readiness": 50,
+   "acute": 236,
+   "chronic": 221,
+   "weight": null,
+   "hrv_7d": 95.3,
+   "rhr_7d": 45.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-28",
+   "sleep_h": 7.85,
+   "sleep_score": 88,
+   "hrv": 105,
+   "hrv_low": 73,
+   "hrv_high": 166,
+   "rhr": 44,
+   "readiness": 63,
+   "acute": 197,
+   "chronic": 219,
+   "weight": null,
+   "hrv_7d": 94.6,
+   "rhr_7d": 45.7,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-29",
+   "sleep_h": 7.25,
+   "sleep_score": 84,
+   "hrv": 119,
+   "hrv_low": 73,
+   "hrv_high": 166,
+   "rhr": 43,
+   "readiness": 2,
+   "acute": 678,
+   "chronic": 303,
+   "weight": null,
+   "hrv_7d": 95,
+   "rhr_7d": 45.4,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-09-30",
+   "sleep_h": 7.23,
+   "sleep_score": 69,
+   "hrv": 91,
+   "hrv_low": 73,
+   "hrv_high": 166,
+   "rhr": 52,
+   "readiness": 1,
+   "acute": 587,
+   "chronic": 301,
+   "weight": null,
+   "hrv_7d": 92.7,
+   "rhr_7d": 46.4,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-01",
+   "sleep_h": 7.32,
+   "sleep_score": 70,
+   "hrv": 108,
+   "hrv_low": 73,
+   "hrv_high": 165,
+   "rhr": 43,
+   "readiness": 1,
+   "acute": 507,
+   "chronic": 298,
+   "weight": null,
+   "hrv_7d": 93.7,
+   "rhr_7d": 46.1,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-02",
+   "sleep_h": 6.27,
+   "sleep_score": 76,
+   "hrv": 120,
+   "hrv_low": 73,
+   "hrv_high": 165,
+   "rhr": 43,
+   "readiness": 25,
+   "acute": 427,
+   "chronic": 294,
+   "weight": null,
+   "hrv_7d": 97.3,
+   "rhr_7d": 45.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-03",
+   "sleep_h": 5.33,
+   "sleep_score": 37,
+   "hrv": 30,
+   "hrv_low": 73,
+   "hrv_high": 165,
+   "rhr": 49,
+   "readiness": 1,
+   "acute": 347,
+   "chronic": 291,
+   "weight": null,
+   "hrv_7d": 93.3,
+   "rhr_7d": 45.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-04",
+   "sleep_h": 8.17,
+   "sleep_score": 91,
+   "hrv": 112,
+   "hrv_low": 74,
+   "hrv_high": 163,
+   "rhr": 44,
+   "readiness": 1,
+   "acute": 566,
+   "chronic": 339,
+   "weight": null,
+   "hrv_7d": 97.9,
+   "rhr_7d": 45.4,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-05",
+   "sleep_h": 7.95,
+   "sleep_score": 82,
+   "hrv": 84,
+   "hrv_low": 74,
+   "hrv_high": 163,
+   "rhr": 47,
+   "readiness": 25,
+   "acute": 595,
+   "chronic": 360,
+   "weight": null,
+   "hrv_7d": 94.9,
+   "rhr_7d": 45.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-06",
+   "sleep_h": 6.57,
+   "sleep_score": 81,
+   "hrv": 104,
+   "hrv_low": 74,
+   "hrv_high": 163,
+   "rhr": 45,
+   "readiness": 50,
+   "acute": 501,
+   "chronic": 356,
+   "weight": null,
+   "hrv_7d": 92.7,
+   "rhr_7d": 46.1,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-07",
+   "sleep_h": 6.95,
+   "sleep_score": 84,
+   "hrv": 96,
+   "hrv_low": 73,
+   "hrv_high": 162,
+   "rhr": 46,
+   "readiness": 45,
+   "acute": 570,
+   "chronic": 382,
+   "weight": null,
+   "hrv_7d": 93.4,
+   "rhr_7d": 45.3,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-08",
+   "sleep_h": 5.18,
+   "sleep_score": 40,
+   "hrv": 50,
+   "hrv_low": 74,
+   "hrv_high": 162,
+   "rhr": 50,
+   "readiness": 10,
+   "acute": 460,
+   "chronic": 379,
+   "weight": null,
+   "hrv_7d": 85.1,
+   "rhr_7d": 46.3,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-09",
+   "sleep_h": 3.25,
+   "sleep_score": 26,
+   "hrv": 35,
+   "hrv_low": 74,
+   "hrv_high": 163,
+   "rhr": 49,
+   "readiness": 1,
+   "acute": 350,
+   "chronic": 377,
+   "weight": null,
+   "hrv_7d": 73,
+   "rhr_7d": 47.1,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-10",
+   "sleep_h": 9.68,
+   "sleep_score": 71,
+   "hrv": 101,
+   "hrv_low": 72,
+   "hrv_high": 165,
+   "rhr": 44,
+   "readiness": 47,
+   "acute": 292,
+   "chronic": 365,
+   "weight": null,
+   "hrv_7d": 83.1,
+   "rhr_7d": 46.4,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-11",
+   "sleep_h": 4.6,
+   "sleep_score": 54,
+   "hrv": 85,
+   "hrv_low": 73,
+   "hrv_high": 165,
+   "rhr": 47,
+   "readiness": 8,
+   "acute": 419,
+   "chronic": 388,
+   "weight": null,
+   "hrv_7d": 79.3,
+   "rhr_7d": 46.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-12",
+   "sleep_h": 8.78,
+   "sleep_score": 94,
+   "hrv": 97,
+   "hrv_low": 73,
+   "hrv_high": 164,
+   "rhr": 43,
+   "readiness": 53,
+   "acute": 343,
+   "chronic": 381,
+   "weight": null,
+   "hrv_7d": 81.1,
+   "rhr_7d": 46.3,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-13",
+   "sleep_h": 3.75,
+   "sleep_score": 46,
+   "hrv": 91,
+   "hrv_low": 72,
+   "hrv_high": 164,
+   "rhr": 50,
+   "readiness": 1,
+   "acute": 705,
+   "chronic": 453,
+   "weight": null,
+   "hrv_7d": 79.3,
+   "rhr_7d": 47,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-14",
+   "sleep_h": 7.88,
+   "sleep_score": 92,
+   "hrv": 103,
+   "hrv_low": 72,
+   "hrv_high": 163,
+   "rhr": 45,
+   "readiness": 1,
+   "acute": 585,
+   "chronic": 449,
+   "weight": null,
+   "hrv_7d": 80.3,
+   "rhr_7d": 46.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-15",
+   "sleep_h": 6.88,
+   "sleep_score": 84,
+   "hrv": 111,
+   "hrv_low": 71,
+   "hrv_high": 162,
+   "rhr": 43,
+   "readiness": 25,
+   "acute": 494,
+   "chronic": 439,
+   "weight": null,
+   "hrv_7d": 89,
+   "rhr_7d": 45.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-16",
+   "sleep_h": 5.63,
+   "sleep_score": 54,
+   "hrv": 79,
+   "hrv_low": 70,
+   "hrv_high": 163,
+   "rhr": 47,
+   "readiness": 2,
+   "acute": 974,
+   "chronic": 529,
+   "weight": null,
+   "hrv_7d": 95.3,
+   "rhr_7d": 45.6,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-17",
+   "sleep_h": null,
+   "sleep_score": null,
+   "hrv": null,
+   "hrv_low": 70,
+   "hrv_high": 163,
+   "rhr": 50,
+   "readiness": 1,
+   "acute": 1196,
+   "chronic": 586,
+   "weight": null,
+   "hrv_7d": 94.3,
+   "rhr_7d": 46.4,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-18",
+   "sleep_h": 4.32,
+   "sleep_score": 28,
+   "hrv": 68,
+   "hrv_low": 71,
+   "hrv_high": 162,
+   "rhr": 49,
+   "readiness": 1,
+   "acute": 1042,
+   "chronic": 578,
+   "weight": null,
+   "hrv_7d": 91.5,
+   "rhr_7d": 46.7,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-19",
+   "sleep_h": null,
+   "sleep_score": null,
+   "hrv": null,
+   "hrv_low": null,
+   "hrv_high": null,
+   "rhr": 45,
+   "readiness": 14,
+   "acute": 978,
+   "chronic": 587,
+   "weight": null,
+   "hrv_7d": 90.4,
+   "rhr_7d": 47,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-20",
+   "sleep_h": 7.2,
+   "sleep_score": 86,
+   "hrv": 115,
+   "hrv_low": 71,
+   "hrv_high": 161,
+   "rhr": 44,
+   "readiness": 52,
+   "acute": 816,
+   "chronic": 583,
+   "weight": null,
+   "hrv_7d": 95.2,
+   "rhr_7d": 46.1,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-21",
+   "sleep_h": 7.27,
+   "sleep_score": 74,
+   "hrv": 80,
+   "hrv_low": 71,
+   "hrv_high": 160,
+   "rhr": 50,
+   "readiness": 70,
+   "acute": 653,
+   "chronic": 580,
+   "weight": null,
+   "hrv_7d": 90.6,
+   "rhr_7d": 46.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-22",
+   "sleep_h": 4.9,
+   "sleep_score": 29,
+   "hrv": 47,
+   "hrv_low": 71,
+   "hrv_high": 160,
+   "rhr": 50,
+   "readiness": 9,
+   "acute": 650,
+   "chronic": 600,
+   "weight": null,
+   "hrv_7d": 77.8,
+   "rhr_7d": 47.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-23",
+   "sleep_h": 8.12,
+   "sleep_score": 94,
+   "hrv": 101,
+   "hrv_low": 71,
+   "hrv_high": 160,
+   "rhr": 47,
+   "readiness": 58,
+   "acute": 491,
+   "chronic": 595,
+   "weight": null,
+   "hrv_7d": 82.2,
+   "rhr_7d": 47.9,
+   "hrv_base": 91.7
+  },
+  {
+   "date": "2026-10-24",
+   "sleep_h": 4.72,
+   "sleep_score": 45,
+   "hrv": 60,
+   "hrv_low": 71,
+   "hrv_high": 160,
+   "rhr": 52,
+   "readiness": 18,
+   "acute": 377,
+   "chronic": 582,
+   "weight": null,
+   "hrv_7d": 78.5,
+   "rhr_7d": 48.1,
+   "hrv_base": 91.7
+  }
+ ],
+ "recovery": {
+  "sleep_7d": 6.1,
+  "sleep_base": 6.6,
+  "hrv_7d": 78.5,
+  "hrv_base": 91.7,
+  "rhr_7d": 48.1,
+  "rhr_base": 46.1,
+  "readiness_today": 18,
+  "training_status": "MAINTAINING_6",
+  "vo2max": 56.8
+ },
+ "efficiency": [
+  {
+   "date": "2026-08-01",
+   "ef": 1.295,
+   "pace_s_km": 324,
+   "avg_hr": 143
+  },
+  {
+   "date": "2026-08-16",
+   "ef": 1.305,
+   "pace_s_km": 315,
+   "avg_hr": 146
+  },
+  {
+   "date": "2026-08-21",
+   "ef": 1.467,
+   "pace_s_km": 286,
+   "avg_hr": 143
+  },
+  {
+   "date": "2026-08-23",
+   "ef": 1.189,
+   "pace_s_km": 371,
+   "avg_hr": 136
+  },
+  {
+   "date": "2026-09-20",
+   "ef": 1.424,
+   "pace_s_km": 301,
+   "avg_hr": 140
+  },
+  {
+   "date": "2026-10-05",
+   "ef": 1.343,
+   "pace_s_km": 292,
+   "avg_hr": 153
+  },
+  {
+   "date": "2026-10-11",
+   "ef": 1.227,
+   "pace_s_km": 365,
+   "avg_hr": 134
+  },
+  {
+   "date": "2026-10-19",
+   "ef": 1.459,
+   "pace_s_km": 298,
+   "avg_hr": 138
+  },
+  {
+   "date": "2026-10-22",
+   "ef": 1.278,
+   "pace_s_km": 326,
+   "avg_hr": 144
+  }
+ ],
+ "recent": [
+  {
+   "date": "2026-10-22",
+   "sport": "run",
+   "minutes": 56,
+   "km": 10.3,
+   "avg_hr": 144,
+   "pace_s_km": 326,
+   "avg_power": null,
+   "load": 111,
+   "aerobic_te": 3.299999952316284,
+   "track": false
+  },
+  {
+   "date": "2026-10-19",
+   "sport": "run",
+   "minutes": 26,
+   "km": 5.2,
+   "avg_hr": 138,
+   "pace_s_km": 298,
+   "avg_power": null,
+   "load": 71,
+   "aerobic_te": 2.799999952316284,
+   "track": false
+  },
+  {
+   "date": "2026-10-17",
+   "sport": "bike",
+   "minutes": 189,
+   "km": 71.2,
+   "avg_hr": 131,
+   "pace_s_km": null,
+   "avg_power": null,
+   "load": 280,
+   "aerobic_te": 4.599999904632568,
+   "track": false
+  },
+  {
+   "date": "2026-10-16",
+   "sport": "bike",
+   "minutes": 296,
+   "km": 106.8,
+   "avg_hr": 133,
+   "pace_s_km": null,
+   "avg_power": null,
+   "load": 439,
+   "aerobic_te": 4.599999904632568,
+   "track": false
+  },
+  {
+   "date": "2026-10-13",
+   "sport": "run",
+   "minutes": 9,
+   "km": 2.6,
+   "avg_hr": 162,
+   "pace_s_km": 319,
+   "avg_power": null,
+   "load": 345,
+   "aerobic_te": 3.700000047683716,
+   "track": true
+  },
+  {
+   "date": "2026-10-11",
+   "sport": "run",
+   "minutes": 129,
+   "km": 21.4,
+   "avg_hr": 134,
+   "pace_s_km": 365,
+   "avg_power": null,
+   "load": 145,
+   "aerobic_te": 3.799999952316284,
+   "track": false
+  },
+  {
+   "date": "2026-10-07",
+   "sport": "run",
+   "minutes": 32,
+   "km": 6.4,
+   "avg_hr": 160,
+   "pace_s_km": 308,
+   "avg_power": null,
+   "load": 128,
+   "aerobic_te": 3.700000047683716,
+   "track": false
+  },
+  {
+   "date": "2026-10-05",
+   "sport": "run",
+   "minutes": 26,
+   "km": 5.4,
+   "avg_hr": 153,
+   "pace_s_km": 292,
+   "avg_power": null,
+   "load": 100,
+   "aerobic_te": 3.4000000953674316,
+   "track": false
+  },
+  {
+   "date": "2026-10-04",
+   "sport": "bike",
+   "minutes": 115,
+   "km": 49.6,
+   "avg_hr": 135,
+   "pace_s_km": null,
+   "avg_power": null,
+   "load": 226,
+   "aerobic_te": 3.9000000953674316,
+   "track": false
+  },
+  {
+   "date": "2026-09-29",
+   "sport": "run",
+   "minutes": 22,
+   "km": 5.2,
+   "avg_hr": 167,
+   "pace_s_km": 322,
+   "avg_power": null,
+   "load": 409,
+   "aerobic_te": 4.400000095367432,
+   "track": true
+  }
+ ]
+}

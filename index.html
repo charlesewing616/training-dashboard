@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Road to Muscat</title>
+<meta name="description" content="Training dashboard for Ironman 70.3 Oman: plan, coach's notes and data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: a race-bib header over a single column of panels; charts pair up on wide screens. */
+:root {
+  --bg: #eef2f1; --surface: #ffffff; --ink: #14211f; --muted: #5a6b68; --line: #d7e0de;
+  --accent: #0b6e69; --accent-soft: #dcefed;
+  --run: #d2553f; --bike: #c98b0e; --swim: #2f6fb5; --strength: #7c8a87;
+  --good: #2e8b57; --warn: #b7791f; --bad: #c2410c;
+  --display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1514; --surface: #16201f; --ink: #e5edeb; --muted: #93a3a0; --line: #26332f;
+    --accent: #45b8ae; --accent-soft: #173431;
+    --run: #f07a62; --bike: #efb53c; --swim: #6ba3e8; --strength: #9aa8a5;
+    --good: #4cc38a; --warn: #e3a83a; --bad: #f2774a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1514; --surface: #16201f; --ink: #e5edeb; --muted: #93a3a0; --line: #26332f;
+  --accent: #45b8ae; --accent-soft: #173431;
+  --run: #f07a62; --bike: #efb53c; --swim: #6ba3e8; --strength: #9aa8a5;
+  --good: #4cc38a; --warn: #e3a83a; --bad: #f2774a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--ink); font: 400 16px/1.5 var(--body);
+  font-variant-numeric: tabular-nums;
+  padding: env(safe-area-inset-top, 0px) max(16px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(16px, env(safe-area-inset-left, 0px));
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 28px 48px; display: grid; gap: 20px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: .01em; margin: 0; text-wrap: balance; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+.label { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.muted { color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; min-width: 0; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+
+/* Header */
+.bib { background: var(--ink); color: var(--bg); border-radius: 14px; padding: 24px; display: grid; gap: 20px; }
+.bib-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+.bib h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: .95; text-transform: uppercase; }
+.bib .sub { color: color-mix(in srgb, var(--bg) 70%, transparent); margin-top: 6px; font-size: 1rem; }
+.count { text-align: right; }
+@media (max-width: 560px) { .count { text-align: left; } }
+.count .n { font-family: var(--display); font-weight: 700; font-size: clamp(3rem, 9vw, 5rem); line-height: .9; }
+.count .u { font-family: var(--display); font-size: 1.1rem; text-transform: uppercase; letter-spacing: .08em; }
+.facts { display: flex; gap: 10px 28px; flex-wrap: wrap; }
+.facts div { display: grid; }
+.facts .label { color: color-mix(in srgb, var(--bg) 60%, transparent); }
+.facts b { font-family: var(--display); font-size: 1.35rem; font-weight: 600; }
+.phases { position: relative; display: flex; height: 30px; border-radius: 6px; overflow: hidden; }
+.phases span { display: flex; align-items: center; padding-inline: 8px; font-size: .78rem; font-weight: 600; white-space: nowrap; overflow: hidden; color: var(--ink); border-right: 2px solid var(--ink); }
+.phases span:last-child { border-right: 0; }
+.today-mark { position: absolute; top: -4px; bottom: -4px; width: 3px; background: var(--bg); box-shadow: 0 0 0 2px var(--ink); border-radius: 2px; }
+
+/* Coach */
+.coach { border-left: 4px solid var(--accent); }
+.coach .verdict { font-family: var(--display); font-size: 1.6rem; font-weight: 600; line-height: 1.2; margin: 4px 0 12px; max-width: 46ch; }
+.coach ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; max-width: 75ch; }
+.coach .focus { margin-top: 14px; background: var(--accent-soft); border-radius: 8px; padding: 10px 14px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.chip { font-size: .8rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; border: 1px solid currentColor; }
+.chip.warn { color: var(--warn); } .chip.bad { color: var(--bad); } .chip.good { color: var(--good); }
+details.history summary { cursor: pointer; color: var(--accent); font-weight: 600; margin-top: 14px; }
+details.history article { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; }
+
+/* Stat tiles */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 4px; border-top: 4px solid var(--line); }
+.tile.good { border-top-color: var(--good); } .tile.warn { border-top-color: var(--warn); } .tile.bad { border-top-color: var(--bad); }
+.tile .v { font-family: var(--display); font-size: 2.2rem; font-weight: 700; line-height: 1; }
+.tile .v small { font-size: 1rem; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.tile .d { font-size: .88rem; color: var(--muted); }
+
+/* Week */
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.day { border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.day.today { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.day .dname { display: flex; justify-content: space-between; align-items: center; }
+.day .dname b { font-family: var(--display); font-size: 1.15rem; }
+.tier { font-size: .7rem; font-weight: 700; padding: 1px 7px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+.tier.A { background: var(--accent); color: var(--surface); }
+.day .sess { font-weight: 600; line-height: 1.3; }
+.day .tgt { font-size: .86rem; color: var(--muted); line-height: 1.35; }
+.done { font-size: .82rem; font-weight: 600; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+.dot.run { background: var(--run); } .dot.bike { background: var(--bike); } .dot.swim { background: var(--swim); } .dot.strength { background: var(--strength); }
+@media (max-width: 860px) { .week { grid-template-columns: 1fr; } .day { grid-template-columns: 70px 1fr; align-items: start; } .day .dname { display: grid; gap: 4px; justify-items: start; } }
+
+/* Charts */
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+.chart { position: relative; height: 240px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.note { font-size: .86rem; color: var(--muted); margin-top: 10px; max-width: 70ch; }
+
+/* Tables */
+.tbl { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }
+tr.current td { background: var(--accent-soft); }
+tr.current td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+tr.past td { color: var(--muted); }
+
+footer { font-size: .82rem; color: var(--muted); text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bib">
+    <div class="bib-top">
+      <div>
+        <div class="label" style="color:inherit;opacity:.7">Charles · age-group</div>
+        <h1>Road to Muscat</h1>
+        <div class="sub" id="race-line">Ironman 70.3 Oman</div>
+      </div>
+      <div class="count"><div class="n" id="days">–</div><div class="u">days to go</div></div>
+    </div>
+    <div class="facts">
+      <div><span class="label">Week</span><b id="f-week">–</b></div>
+      <div><span class="label">Phase</span><b id="f-phase">–</b></div>
+      <div><span class="label">Goal</span><b id="f-goal">–</b></div>
+      <div><span class="label">FTP</span><b id="f-ftp">–</b></div>
+      <div><span class="label">VO2 max</span><b id="f-vo2">–</b></div>
+    </div>
+    <div class="phases" id="phases" aria-label="Training phases"></div>
+  </header>
+
+  <section class="panel coach" id="coach" hidden>
+    <div class="panel-head"><span class="label">Coach's notes</span><span class="muted" id="coach-date"></span></div>
+    <div class="verdict" id="coach-verdict"></div>
+    <ul id="coach-points"></ul>
+    <div class="focus" id="coach-focus"></div>
+    <div class="chips" id="coach-flags"></div>
+    <details class="history" id="coach-history" hidden><summary>Earlier weeks</summary><div id="coach-history-list"></div></details>
+  </section>
+
+  <section>
+    <div class="panel-head" style="margin-bottom:10px"><h2>Recovery</h2><span class="muted">last 7 days vs previous 4 weeks</span></div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2 id="week-title">This week</h2><span class="muted" id="week-status"></span></div>
+    <div class="week" id="week"></div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <div class="panel-head"><h3>Weekly training hours</h3>
+        <div class="legend"><span><i class="dot run"></i>Run</span><span><i class="dot bike"></i>Bike</span><span><i class="dot swim"></i>Swim</span><span><i class="dot strength"></i>Strength</span></div></div>
+      <div class="chart"><canvas id="c-hours" aria-label="Weekly training hours by sport"></canvas></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h3>Training load</h3>
+        <div class="legend"><span><i class="dot" style="background:var(--accent)"></i>Acute (7-day)</span><span><i class="dot" style="background:var(--muted)"></i>Chronic (28-day)</span></div></div>
+      <div class="chart"><canvas id="c-load" aria-label="Acute and chronic training load"></canvas></div>
+      <p class="note">Garmin's load. Acute above chronic means building; well below means fitness is flattening.</p>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h3>Sleep</h3><div class="legend"><span>Bars: hours · line: 7 h target</span></div></div>
+      <div class="chart"><canvas id="c-sleep" aria-label="Nightly sleep hours"></canvas></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h3>Overnight HRV and resting HR</h3>
+        <div class="legend"><span><i class="dot" style="background:var(--accent)"></i>HRV (ms)</span><span><i class="dot" style="background:var(--run)"></i>Resting HR (bpm)</span></div></div>
+      <div class="chart"><canvas id="c-hrv" aria-label="Overnight HRV and resting heart rate"></canvas></div>
+      <p class="note">Lines are 7-day averages; dots are single nights; dashed line is your HRV baseline. HRV falling while resting HR rises means back off.</p>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head"><h3>Easy-run efficiency</h3><span class="muted">metres per minute per heartbeat, easy runs over 20 min</span></div>
+    <div class="chart"><canvas id="c-ef" aria-label="Easy run efficiency over time"></canvas></div>
+    <p class="note">The aerobic base at work: as fitness builds, the same heart rate buys more speed and this line rises. Heat, poor sleep and tired legs pull single points down.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>The plan</h2><span class="muted">16 weeks to race day</span></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Week</th><th>Starts</th><th>Phase</th><th>Thursday run</th><th>Saturday ride</th><th>Notes</th></tr></thead>
+      <tbody id="plan-rows"></tbody>
+    </table></div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <div class="panel-head"><h3>Race estimate</h3></div>
+      <div class="tbl"><table><thead><tr><th>Leg</th><th>Distance</th><th>Estimate</th></tr></thead><tbody id="race-rows"></tbody></table></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h3>Bike power zones</h3><span class="muted" id="ftp-note"></span></div>
+      <div class="tbl"><table><thead><tr><th>Zone</th><th>Watts</th></tr></thead><tbody id="zone-rows"></tbody></table></div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head"><h3>Recent sessions</h3></div>
+    <div class="tbl"><table><thead><tr><th>Date</th><th>Sport</th><th>Time</th><th>Distance</th><th>Avg HR</th><th>Pace / power</th><th>Load</th></tr></thead><tbody id="recent-rows"></tbody></table></div>
+  </section>
+
+  <footer id="footer">Data from Garmin Connect. No routes or locations are published.</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const $ = (id) => document.getElementById(id);
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtDate = (iso, opts = {day: "numeric", month: "short"}) => new Date(iso + "T12:00:00").toLocaleDateString("en-GB", opts);
+const pace = (s) => s ? `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}/km` : "–";
+const hm = (m) => m >= 60 ? `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}` : `${m} min`;
+const SPORT = {run: "Run", bike: "Bike", swim: "Swim", strength: "Strength"};
+let DATA, charts = [];
+
+function header(d) {
+  const race = new Date(d.race.date + "T07:00:00");
+  const days = Math.max(0, Math.ceil((race - new Date()) / 864e5));
+  $("days").textContent = days;
+  $("race-line").textContent = `${d.race.name} · ${fmtDate(d.race.date, {weekday: "short", day: "numeric", month: "long", year: "numeric"})}`;
+  const phase = d.phases.find((p) => d.today >= p.start && d.today <= p.end);
+  $("f-week").textContent = d.week_no ? `${d.week_no} of 16` : "–";
+  $("f-phase").textContent = phase ? phase.name : "–";
+  $("f-goal").textContent = d.race.goal || "–";
+  $("f-ftp").textContent = d.zones.ftp_w ? `${d.zones.ftp_w} W` : "–";
+  $("f-vo2").textContent = d.recovery.vo2max ?? "–";
+
+  const t0 = Date.parse(d.phases[0].start), t1 = Date.parse(d.phases.at(-1).end) + 864e5;
+  const tints = ["--accent", "--bike", "--strength", "--run", "--swim"];
+  $("phases").innerHTML = d.phases.map((p, i) => {
+    const w = (Date.parse(p.end) + 864e5 - Date.parse(p.start)) / (t1 - t0) * 100;
+    return `<span style="flex:0 0 ${w}%;background:color-mix(in srgb, var(${tints[i]}) 45%, var(--bg))" title="${esc(p.name)}: ${fmtDate(p.start)} to ${fmtDate(p.end)}">${esc(p.name)}</span>`;
+  }).join("") + `<i class="today-mark" style="left:${Math.min(99.5, Math.max(0, (Date.now() - t0) / (t1 - t0) * 100))}%" title="Today"></i>`;
+}
+
+function coach(d) {
+  const c = d.coach; if (!c) return;
+  $("coach").hidden = false;
+  $("coach-date").textContent = `Week ${c.week} · written ${fmtDate(c.written)}`;
+  $("coach-verdict").textContent = c.verdict;
+  $("coach-points").innerHTML = c.points.map((p) => `<li>${esc(p)}</li>`).join("");
+  $("coach-focus").innerHTML = `<span class="label">Focus this week</span><div>${esc(c.focus)}</div>`;
+  $("coach-flags").innerHTML = (c.flags || []).map((f) => `<span class="chip warn">${esc(f)}</span>`).join("");
+  if (d.coach_history.length) {
+    $("coach-history").hidden = false;
+    $("coach-history-list").innerHTML = d.coach_history.map((h) => `<article><b>Week ${h.week}:</b> ${esc(h.verdict)}<ul>${h.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></article>`).join("");
+  }
+}
+
+function tiles(d) {
+  const r = d.recovery;
+  const state = (diff, goodIfUp) => diff == null ? "" : (goodIfUp ? diff : -diff) >= -0.03 ? "good" : (goodIfUp ? diff : -diff) >= -0.1 ? "warn" : "bad";
+  const rel = (a, b) => (a != null && b) ? (a - b) / b : null;
+  const ready = r.readiness_today;
+  const items = [
+    {k: "Sleep", v: r.sleep_7d, u: "h/night", d: `baseline ${r.sleep_base ?? "–"} h · target 7+`, s: r.sleep_7d == null ? "" : r.sleep_7d >= 7 ? "good" : r.sleep_7d >= 6.5 ? "warn" : "bad"},
+    {k: "Overnight HRV", v: r.hrv_7d, u: "ms", d: `baseline ${r.hrv_base ?? "–"} ms`, s: state(rel(r.hrv_7d, r.hrv_base), true)},
+    {k: "Resting HR", v: r.rhr_7d, u: "bpm", d: `baseline ${r.rhr_base ?? "–"} bpm`, s: r.rhr_7d == null || r.rhr_base == null ? "" : r.rhr_7d - r.rhr_base <= 2 ? "good" : r.rhr_7d - r.rhr_base < 5 ? "warn" : "bad"},
+    {k: "Readiness today", v: ready, u: "/100", d: "Garmin training readiness", s: ready == null ? "" : ready >= 60 ? "good" : ready >= 30 ? "warn" : "bad"},
+  ];
+  $("tiles").innerHTML = items.map((t) => `<div class="tile ${t.s}"><span class="label">${t.k}</span><span class="v">${t.v ?? "–"}<small>${t.u}</small></span><span class="d">${t.d}</span></div>`).join("");
+}
+
+function week(d) {
+  const tw = d.this_week;
+  $("week-title").textContent = `Week ${tw.week ?? ""}: this week`;
+  $("week-status").textContent = tw.status === "confirmed" ? "Confirmed plan" : "Draft";
+  $("week").innerHTML = (tw.days || []).map((x) => {
+    const done = x.done && x.done.length ? x.done.map((s) => `<span class="done"><i class="dot ${s.sport}"></i>${SPORT[s.sport]} ${hm(s.minutes)}${s.km ? ` · ${s.km} km` : ""}</span>`).join("")
+      : (x.date < d.today && x.session !== "Off" ? `<span class="done muted">${/gym|zwift/i.test(x.session) ? "Not on Garmin" : "Not recorded"}</span>` : "");
+    return `<div class="day ${x.date === d.today ? "today" : ""}">
+      <div class="dname"><b>${x.day}</b><span class="muted" style="font-size:.8rem">${fmtDate(x.date)}</span>${x.tier ? `<span class="tier ${x.tier}">${x.tier}</span>` : ""}</div>
+      <div><div class="sess">${esc(x.session)}</div><div class="tgt">${esc(x.target)}</div>${done}</div></div>`;
+  }).join("");
+}
+
+function tables(d) {
+  $("plan-rows").innerHTML = d.weeks_plan.map((w) => {
+    const cls = w.week === d.week_no ? "current" : (d.week_no && w.week < d.week_no ? "past" : "");
+    return `<tr class="${cls}"><td><b>${w.week}</b></td><td>${fmtDate(w.start)}</td><td>${esc(w.phase)}</td><td>${esc(w.thursday)}</td><td>${esc(w.saturday)}</td><td>${esc(w.notes)}</td></tr>`;
+  }).join("");
+  $("race-rows").innerHTML = (d.race.estimate || []).map((e) => `<tr${e.leg === "Total" ? ' style="font-weight:600"' : ""}><td>${esc(e.leg)}</td><td>${esc(e.distance)}</td><td>${esc(e.estimate)}${e.note ? `<div class="muted" style="font-size:.82rem">${esc(e.note)}</div>` : ""}</td></tr>`).join("");
+  $("ftp-note").textContent = d.zones.ftp_w ? `FTP ${d.zones.ftp_w} W, tested ${fmtDate(d.zones.ftp_tested)}` : "";
+  $("zone-rows").innerHTML = (d.zones.power || []).map((z) => `<tr><td>${esc(z.zone)}</td><td>${esc(z.range)}</td></tr>`).join("");
+  $("recent-rows").innerHTML = d.recent.map((s) => `<tr><td>${fmtDate(s.date, {weekday: "short", day: "numeric", month: "short"})}</td><td><span class="done"><i class="dot ${s.sport}"></i>${SPORT[s.sport]}</span></td><td>${hm(s.minutes)}</td><td>${s.km ? s.km + " km" : "–"}</td><td>${s.avg_hr ?? "–"}</td><td>${s.sport === "run" ? pace(s.pace_s_km) : s.avg_power ? s.avg_power + " W" : "–"}</td><td>${s.load ?? "–"}</td></tr>`).join("");
+  $("footer").textContent = `Data from Garmin Connect, updated ${new Date(d.generated).toLocaleString("en-GB", {day: "numeric", month: "short", hour: "2-digit", minute: "2-digit"})}. No routes or locations are published.`;
+}
+
+function drawCharts(d) {
+  charts.forEach((c) => c.destroy()); charts = [];
+  const ink = css("--muted"), grid = css("--line"), acc = css("--accent");
+  Chart.defaults.font.family = css("--body"); Chart.defaults.color = ink; Chart.defaults.borderColor = grid;
+  const base = (extra = {}) => ({
+    responsive: true, maintainAspectRatio: false, animation: false,
+    interaction: {mode: "index", intersect: false},
+    plugins: {legend: {display: false}, tooltip: {backgroundColor: css("--ink"), titleColor: css("--bg"), bodyColor: css("--bg")}},
+    scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}}, y: {grid: {color: grid}, beginAtZero: true}},
+    ...extra,
+  });
+  const days = d.daily.map((x) => fmtDate(x.date));
+
+  charts.push(new Chart($("c-hours"), {type: "bar", data: {
+    labels: d.weekly.map((w) => fmtDate(w.start)),
+    datasets: ["run", "bike", "swim", "strength"].map((k) => ({label: SPORT[k], data: d.weekly.map((w) => w[k]), backgroundColor: css("--" + k), stack: "h", borderRadius: 2}))},
+    options: base({scales: {x: {stacked: true, grid: {display: false}}, y: {stacked: true, grid: {color: grid}, title: {display: true, text: "hours"}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => `${c.dataset.label}: ${c.raw.toFixed(1)} h`}}}})}));
+
+  charts.push(new Chart($("c-load"), {type: "line", data: {labels: days, datasets: [
+    {label: "Acute", data: d.daily.map((x) => x.acute), borderColor: acc, backgroundColor: acc, pointRadius: 0, borderWidth: 2.5, spanGaps: true, fill: false},
+    {label: "Chronic", data: d.daily.map((x) => x.chronic), borderColor: ink, pointRadius: 0, borderWidth: 2, borderDash: [5, 4], spanGaps: true}]},
+    options: base()}));
+
+  charts.push(new Chart($("c-sleep"), {data: {labels: days, datasets: [
+    {type: "bar", label: "Sleep", data: d.daily.map((x) => x.sleep_h), backgroundColor: d.daily.map((x) => x.sleep_h == null ? grid : x.sleep_h >= 7 ? acc : x.sleep_h >= 6 ? css("--warn") : css("--bad")), borderRadius: 2},
+    {type: "line", label: "Target", data: d.daily.map(() => 7), borderColor: ink, borderDash: [4, 4], borderWidth: 1.5, pointRadius: 0}]},
+    options: base({plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => c.dataset.label === "Target" ? "Target: 7 h" : `Sleep: ${c.raw ?? "–"} h`}}}})}));
+
+  charts.push(new Chart($("c-hrv"), {data: {labels: days, datasets: [
+    {type: "line", label: "HRV nightly", data: d.daily.map((x) => x.hrv), borderWidth: 0, pointRadius: 2.5, pointBackgroundColor: css("--accent-soft"), pointBorderColor: acc, showLine: false, yAxisID: "y"},
+    {type: "line", label: "HRV", data: d.daily.map((x) => x.hrv_7d), borderColor: acc, pointRadius: 0, borderWidth: 2.5, spanGaps: true, tension: .3, yAxisID: "y"},
+    {type: "line", label: "HRV baseline", data: d.daily.map((x) => x.hrv_base), borderColor: acc, borderDash: [4, 4], borderWidth: 1.2, pointRadius: 0, yAxisID: "y"},
+    {type: "line", label: "Resting HR", data: d.daily.map((x) => x.rhr_7d), borderColor: css("--run"), pointRadius: 0, borderWidth: 2.5, spanGaps: true, tension: .3, yAxisID: "y1"}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}},
+      y: {grid: {color: grid}, beginAtZero: false, title: {display: true, text: "HRV ms"}},
+      y1: {position: "right", grid: {display: false}, beginAtZero: false, title: {display: true, text: "bpm"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => `${c.dataset.label}${c.dataset.label === "HRV" || c.dataset.label === "Resting HR" ? " (7-day)" : ""}: ${c.raw}`}}}})}));
+
+  charts.push(new Chart($("c-ef"), {type: "line", data: {labels: d.efficiency.map((x) => fmtDate(x.date)), datasets: [
+    {label: "Efficiency", data: d.efficiency.map((x) => x.ef), borderColor: css("--run"), backgroundColor: css("--run"), pointRadius: 4, borderWidth: 2, tension: .25}]},
+    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, beginAtZero: false}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => { const p = d.efficiency[c.dataIndex]; return `${p.ef} · ${pace(p.pace_s_km)} at ${p.avg_hr} bpm`; }}}}})}));
+}
+
+function render(d) { header(d); coach(d); tiles(d); week(d); tables(d); drawCharts(d); }
+
+fetch("data.json", {cache: "no-store"}).then((r) => r.json()).then((d) => { DATA = d; render(d); })
+  .catch(() => { document.querySelector(".wrap").insertAdjacentHTML("afterbegin", '<p class="panel">The training data could not be loaded. Try refreshing.</p>'); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => DATA && render(DATA));
+</script>
+</body>
+</html>
