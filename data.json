@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-26T06:24+00:00",
- "today": "2026-10-26",
+ "generated": "2026-10-27T06:24+00:00",
+ "today": "2026-10-27",
  "week_no": 2,
  "race": {
   "name": "Ironman 70.3 Oman",
@@ -1026,6 +1026,22 @@
   },
   {
    "date": "2026-10-26",
+   "sleep_h": 8.0,
+   "sleep_score": 89,
+   "hrv": 102,
+   "hrv_low": 71,
+   "hrv_high": 159,
+   "rhr": 46,
+   "readiness": 58,
+   "acute": 383,
+   "chronic": 606,
+   "weight": null,
+   "hrv_7d": 86.4,
+   "rhr_7d": 47.7,
+   "hrv_base": 90.2
+  },
+  {
+   "date": "2026-10-27",
    "sleep_h": null,
    "sleep_score": null,
    "hrv": null,
@@ -1036,17 +1052,17 @@
    "acute": null,
    "chronic": null,
    "weight": null,
-   "hrv_7d": 83.8,
-   "rhr_7d": 48,
+   "hrv_7d": 81.7,
+   "rhr_7d": 48.3,
    "hrv_base": 90.2
   }
  ],
  "recovery": {
-  "sleep_7d": 7.1,
+  "sleep_7d": 7.2,
   "sleep_base": 6.4,
-  "hrv_7d": 83.8,
+  "hrv_7d": 81.7,
   "hrv_base": 90.2,
-  "rhr_7d": 48,
+  "rhr_7d": 48.3,
   "rhr_base": 46.2,
   "readiness_today": null,
   "training_status": "PRODUCTIVE_3",
