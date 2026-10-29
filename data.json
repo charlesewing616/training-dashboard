@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T06:24+00:00",
+ "generated": "2026-10-29T08:28+00:00",
  "today": "2026-10-29",
  "week_no": 2,
  "race": {
@@ -226,83 +226,71 @@
   }
  ],
  "this_week": {
-  "week": 1,
-  "start": "2026-10-19",
+  "week": 2,
+  "start": "2026-10-26",
   "status": "confirmed",
   "days": [
    {
     "day": "Mon",
-    "date": "2026-10-19",
-    "session": "Easy run",
-    "target": "Easy, conversational",
-    "tier": "C",
+    "date": "2026-10-26",
+    "session": "Rest",
+    "target": "\u2014",
+    "tier": "",
+    "done": []
+   },
+   {
+    "day": "Tue",
+    "date": "2026-10-27",
+    "session": "Zwift ride",
+    "target": "50 min, about 25 km, moderate (stands in for track)",
+    "tier": "B",
     "done": [
      {
-      "sport": "run",
-      "minutes": 26,
-      "km": 5.2
+      "sport": "bike",
+      "minutes": 45,
+      "km": 24.0
      }
     ]
    },
    {
-    "day": "Tue",
-    "date": "2026-10-20",
-    "session": "Bike FTP test (Zwift Standard)",
-    "target": "20 min all-out, paced evenly",
-    "tier": "B",
-    "done": []
-   },
-   {
     "day": "Wed",
-    "date": "2026-10-21",
-    "session": "Gym: legs and back",
-    "target": "Moderate on legs",
-    "tier": "C",
+    "date": "2026-10-28",
+    "session": "Pilates (AM) + long run, solo, with tempo (PM)",
+    "target": "Pilates easy, mobility. Run 60 min: 15 min easy (5:20\u20135:45/km), 2 \u00d7 10 min tempo at 4:20\u20134:30/km with 3 min jog, then easy to 60 min",
+    "tier": "A",
     "done": []
    },
    {
     "day": "Thu",
-    "date": "2026-10-22",
-    "session": "Long run",
-    "target": "60 min easy",
-    "tier": "A",
-    "done": [
-     {
-      "sport": "run",
-      "minutes": 56,
-      "km": 10.3
-     }
-    ]
+    "date": "2026-10-29",
+    "session": "Bike sweet spot (trainer)",
+    "target": "60 min: 12 min warm-up, 3 \u00d7 10 min at 205\u2013215 W (5 min easy at 130 W between), cool-down; 85\u201390 rpm",
+    "tier": "B",
+    "done": []
    },
    {
     "day": "Fri",
-    "date": "2026-10-23",
-    "session": "Gym: upper, back, shoulders",
-    "target": "Legs light",
-    "tier": "C",
+    "date": "2026-10-30",
+    "session": "Off",
+    "target": "\u2014",
+    "tier": "",
     "done": []
    },
    {
     "day": "Sat",
-    "date": "2026-10-24",
-    "session": "Long ride",
-    "target": "2 hrs at 129\u2013174 W, 80\u201390 rpm",
+    "date": "2026-10-31",
+    "session": "Long ride, Zone 2",
+    "target": "2 hrs at 145\u2013165 W (stay under 174 W); stretch to 2.5 hrs only if it feels easy; 60 g carbs per hour; no run off",
     "tier": "A",
     "done": []
    },
    {
     "day": "Sun",
-    "date": "2026-10-25",
+    "date": "2026-11-01",
     "session": "Off",
-    "target": "Rest",
+    "target": "\u2014",
     "tier": "",
-    "done": [
-     {
-      "sport": "run",
-      "minutes": 47,
-      "km": 7.6
-     }
-    ]
+    "done": []
    }
   ]
  },
@@ -435,14 +423,14 @@
   {
    "start": "2026-10-19",
    "run": 2.15,
-   "bike": 0.0,
+   "bike": 0.68,
    "swim": 0.0,
    "strength": 0.0
   },
   {
    "start": "2026-10-26",
    "run": 0.0,
-   "bike": 0.0,
+   "bike": 0.75,
    "swim": 0.0,
    "strength": 0.0
   }
@@ -1158,6 +1146,18 @@
  ],
  "recent": [
   {
+   "date": "2026-10-27",
+   "sport": "bike",
+   "minutes": 45,
+   "km": 24.0,
+   "avg_hr": null,
+   "pace_s_km": null,
+   "avg_power": 176,
+   "load": null,
+   "aerobic_te": null,
+   "track": false
+  },
+  {
    "date": "2026-10-25",
    "sport": "run",
    "minutes": 47,
@@ -1179,6 +1179,18 @@
    "avg_power": null,
    "load": 111,
    "aerobic_te": 3.299999952316284,
+   "track": false
+  },
+  {
+   "date": "2026-10-20",
+   "sport": "bike",
+   "minutes": 41,
+   "km": 18.2,
+   "avg_hr": null,
+   "pace_s_km": null,
+   "avg_power": 195,
+   "load": null,
+   "aerobic_te": null,
    "track": false
   },
   {
@@ -1251,30 +1263,6 @@
    "avg_power": null,
    "load": 128,
    "aerobic_te": 3.700000047683716,
-   "track": false
-  },
-  {
-   "date": "2026-10-05",
-   "sport": "run",
-   "minutes": 26,
-   "km": 5.4,
-   "avg_hr": 153,
-   "pace_s_km": 292,
-   "avg_power": null,
-   "load": 100,
-   "aerobic_te": 3.4000000953674316,
-   "track": false
-  },
-  {
-   "date": "2026-10-04",
-   "sport": "bike",
-   "minutes": 115,
-   "km": 49.6,
-   "avg_hr": 135,
-   "pace_s_km": null,
-   "avg_power": null,
-   "load": 226,
-   "aerobic_te": 3.9000000953674316,
    "track": false
   }
  ]
