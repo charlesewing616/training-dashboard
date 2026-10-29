@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T08:28+00:00",
+ "generated": "2026-10-29T12:43+00:00",
  "today": "2026-10-29",
  "week_no": 2,
  "race": {
@@ -258,7 +258,13 @@
     "session": "Pilates (AM) + long run, solo, with tempo (PM)",
     "target": "Pilates easy, mobility. Run 60 min: 15 min easy (5:20\u20135:45/km), 2 \u00d7 10 min tempo at 4:20\u20134:30/km with 3 min jog, then easy to 60 min",
     "tier": "A",
-    "done": []
+    "done": [
+     {
+      "sport": "run",
+      "minutes": 46,
+      "km": 9.0
+     }
+    ]
    },
    {
     "day": "Thu",
@@ -429,7 +435,7 @@
   },
   {
    "start": "2026-10-26",
-   "run": 0.0,
+   "run": 0.77,
    "bike": 0.75,
    "swim": 0.0,
    "strength": 0.0
@@ -1052,9 +1058,9 @@
    "hrv_low": 71,
    "hrv_high": 157,
    "rhr": 45,
-   "readiness": 78,
-   "acute": 249,
-   "chronic": 560,
+   "readiness": 65,
+   "acute": 369,
+   "chronic": 582,
    "weight": null,
    "hrv_7d": 90.9,
    "rhr_7d": 46.6,
@@ -1062,31 +1068,31 @@
   },
   {
    "date": "2026-10-29",
-   "sleep_h": null,
-   "sleep_score": null,
-   "hrv": null,
-   "hrv_low": null,
-   "hrv_high": null,
-   "rhr": null,
-   "readiness": null,
-   "acute": null,
-   "chronic": null,
+   "sleep_h": 7.5,
+   "sleep_score": 83,
+   "hrv": 103,
+   "hrv_low": 70,
+   "hrv_high": 157,
+   "rhr": 45,
+   "readiness": 82,
+   "acute": 307,
+   "chronic": 558,
    "weight": null,
-   "hrv_7d": 98.2,
-   "rhr_7d": 46,
+   "hrv_7d": 98.9,
+   "rhr_7d": 45.9,
    "hrv_base": 87.1
   }
  ],
  "recovery": {
   "sleep_7d": 7.4,
   "sleep_base": 6.3,
-  "hrv_7d": 98.2,
+  "hrv_7d": 98.9,
   "hrv_base": 87.1,
-  "rhr_7d": 46,
+  "rhr_7d": 45.9,
   "rhr_base": 46.5,
-  "readiness_today": null,
+  "readiness_today": 82,
   "training_status": "PEAKING_1",
-  "vo2max": 56.9
+  "vo2max": 57.3
  },
  "efficiency": [
   {
@@ -1142,9 +1148,27 @@
    "ef": 1.278,
    "pace_s_km": 326,
    "avg_hr": 144
+  },
+  {
+   "date": "2026-10-28",
+   "ef": 1.349,
+   "pace_s_km": 311,
+   "avg_hr": 143
   }
  ],
  "recent": [
+  {
+   "date": "2026-10-28",
+   "sport": "run",
+   "minutes": 46,
+   "km": 9.0,
+   "avg_hr": 143,
+   "pace_s_km": 311,
+   "avg_power": null,
+   "load": 94,
+   "aerobic_te": 3.200000047683716,
+   "track": false
+  },
   {
    "date": "2026-10-27",
    "sport": "bike",
@@ -1251,18 +1275,6 @@
    "avg_power": null,
    "load": 145,
    "aerobic_te": 3.799999952316284,
-   "track": false
-  },
-  {
-   "date": "2026-10-07",
-   "sport": "run",
-   "minutes": 32,
-   "km": 6.4,
-   "avg_hr": 160,
-   "pace_s_km": 308,
-   "avg_power": null,
-   "load": 128,
-   "aerobic_te": 3.700000047683716,
    "track": false
   }
  ]
