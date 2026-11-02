@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T11:37+00:00",
+ "generated": "2026-11-02T11:39+00:00",
  "today": "2026-11-02",
  "week_no": 3,
  "race": {
@@ -1140,30 +1140,30 @@
   },
   {
    "date": "2026-11-02",
-   "sleep_h": null,
-   "sleep_score": null,
-   "hrv": null,
-   "hrv_low": null,
-   "hrv_high": null,
-   "rhr": null,
-   "readiness": null,
-   "acute": null,
-   "chronic": null,
+   "sleep_h": 8.65,
+   "sleep_score": 87,
+   "hrv": 121,
+   "hrv_low": 71,
+   "hrv_high": 155,
+   "rhr": 43,
+   "readiness": 25,
+   "acute": 462,
+   "chronic": 530,
    "weight": null,
-   "hrv_7d": 91.7,
-   "rhr_7d": 47.2,
+   "hrv_7d": 95.9,
+   "rhr_7d": 46.6,
    "hrv_base": 88.0
   }
  ],
  "recovery": {
-  "sleep_7d": 6.7,
+  "sleep_7d": 7.0,
   "sleep_base": 6.7,
-  "hrv_7d": 91.7,
+  "hrv_7d": 95.9,
   "hrv_base": 88.0,
-  "rhr_7d": 47.2,
+  "rhr_7d": 46.6,
   "rhr_base": 46.6,
-  "readiness_today": null,
-  "training_status": "PRODUCTIVE_3",
+  "readiness_today": 25,
+  "training_status": "MAINTAINING_2",
   "vo2max": 57.3
  },
  "efficiency": [
