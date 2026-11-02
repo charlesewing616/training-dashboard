@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T11:35+00:00",
+ "generated": "2026-11-02T11:37+00:00",
  "today": "2026-11-02",
  "week_no": 3,
  "race": {
@@ -115,18 +115,18 @@
   {
    "week": 3,
    "start": "2026-11-02",
-   "phase": "Base",
-   "thursday": "70 min total, Shorter session",
-   "saturday": "2.75 hrs",
-   "notes": ""
+   "phase": "Base (recovery)",
+   "thursday": "50 min total, Shorter session",
+   "saturday": "2 hrs",
+   "notes": "Lighter week (swapped with week 4)"
   },
   {
    "week": 4,
    "start": "2026-11-09",
-   "phase": "Base (recovery)",
-   "thursday": "50 min total, Shorter session",
-   "saturday": "2 hrs",
-   "notes": "Lighter week"
+   "phase": "Base",
+   "thursday": "70 min total, Shorter session",
+   "saturday": "2.75 hrs",
+   "notes": "Moved from week 3"
   },
   {
    "week": 5,
@@ -226,83 +226,65 @@
   }
  ],
  "this_week": {
-  "week": 2,
-  "start": "2026-10-26",
+  "week": 3,
+  "start": "2026-11-02",
   "status": "confirmed",
   "days": [
    {
     "day": "Mon",
-    "date": "2026-10-26",
-    "session": "Rest",
-    "target": "\u2014",
-    "tier": "",
+    "date": "2026-11-02",
+    "session": "Light gym + sauna",
+    "target": "30-40 min mobility and activation, no heavy lifting",
+    "tier": "C",
     "done": []
    },
    {
     "day": "Tue",
-    "date": "2026-10-27",
-    "session": "Zwift ride",
-    "target": "50 min, about 25 km, moderate (stands in for track)",
-    "tier": "B",
-    "done": [
-     {
-      "sport": "bike",
-      "minutes": 45,
-      "km": 24.0
-     }
-    ]
-   },
-   {
-    "day": "Wed",
-    "date": "2026-10-28",
-    "session": "Pilates (AM) + long run, solo, with tempo (PM)",
-    "target": "Pilates easy, mobility. Run 60 min: 15 min easy (5:20\u20135:45/km), 2 \u00d7 10 min tempo at 4:20\u20134:30/km with 3 min jog, then easy to 60 min",
-    "tier": "A",
-    "done": [
-     {
-      "sport": "run",
-      "minutes": 46,
-      "km": 9.0
-     }
-    ]
-   },
-   {
-    "day": "Thu",
-    "date": "2026-10-29",
-    "session": "Bike sweet spot (trainer)",
-    "target": "60 min: 12 min warm-up, 3 \u00d7 10 min at 205\u2013215 W (5 min easy at 130 W between), cool-down; 85\u201390 rpm",
+    "date": "2026-11-03",
+    "session": "Bike sweet spot (trainer), AM",
+    "target": "60 min: 3 x 10 min at 205-215 W, 5 min at 130 W between; 85-90 rpm. Still tired: 45 min easy at 130-155 W",
     "tier": "B",
     "done": []
    },
    {
+    "day": "Wed",
+    "date": "2026-11-04",
+    "session": "Long run (AM) + gym upper (PM)",
+    "target": "50 min: 15 min easy, 2 x 8 min at 4:20-4:30/km with 2 min jog, easy to 50 min; all easy if short on sleep",
+    "tier": "A",
+    "done": []
+   },
+   {
+    "day": "Thu",
+    "date": "2026-11-05",
+    "session": "Easy spin",
+    "target": "45 min at 130-155 W, 90 rpm; skip Tuesday's session if missed",
+    "tier": "C",
+    "done": []
+   },
+   {
     "day": "Fri",
-    "date": "2026-10-30",
-    "session": "Off",
-    "target": "\u2014",
+    "date": "2026-11-06",
+    "session": "Rest",
+    "target": "Off, or 15 min mobility",
     "tier": "",
     "done": []
    },
    {
     "day": "Sat",
-    "date": "2026-10-31",
-    "session": "Long ride, Zone 2",
-    "target": "2 hrs at 145\u2013165 W (stay under 174 W); stretch to 2.5 hrs only if it feels easy; 60 g carbs per hour; no run off",
-    "tier": "A",
+    "date": "2026-11-07",
+    "session": "Tennis, sauna, light gym",
+    "target": "10 min knee/hip warm-up before tennis; no leg work",
+    "tier": "",
     "done": []
    },
    {
     "day": "Sun",
-    "date": "2026-11-01",
-    "session": "Off",
-    "target": "\u2014",
-    "tier": "",
-    "done": [
-     {
-      "sport": "bike",
-      "minutes": 128,
-      "km": 53.4
-     }
-    ]
+    "date": "2026-11-08",
+    "session": "Long ride, Zone 2",
+    "target": "2 hrs at 145-165 W (cap 174 W); 1.5 hrs floor; 60 g carbs/h",
+    "tier": "A",
+    "done": []
    }
   ]
  },
@@ -344,23 +326,43 @@
   }
  ],
  "coach": {
-  "week": 1,
-  "week_start": "2026-10-19",
-  "written": "2026-10-24",
-  "verdict": "Solid first week: FTP set, steady volume, but sleep is the limiter.",
+  "week": 2,
+  "week_start": "2026-10-26",
+  "written": "2026-11-01",
+  "verdict": "Bike quality done, but both key sessions came up short of plan.",
   "points": [
-   "FTP test: 245 W for 20 minutes, giving an FTP of 232 W. Pacing was dead even (best 10, 15 and 20 min all 245\u2013246 W) and you finished with a little left.",
-   "Cadence averaged about 68 rpm in the test. Aim for 80\u201390 rpm in bike sessions; most riders hold power better there.",
-   "Thursday's 10.3 km at 5:25/km: heart rate rose about 10 bpm at the same pace in the second half. On 4.9 hours' sleep that's expected, but easy runs should stay under about 145 bpm.",
-   "Sleep averaged 6.1 hours, with three nights under 5. Overnight HRV is 14% below your 4-week baseline. Sleep is the cheapest performance gain available right now."
+   "Long run: 9.0 km in 46 min at 5:02/km, HR 143, vs 60 min with 2 x 10 min tempo. No tempo blocks; the whole run sat at a steady 4:46-5:12/km instead.",
+   "Thursday bike: 31 min at 198 W with steps to 265 W (114% FTP) and HR to 180, vs 3 x 10 min at 205-215 W. Shorter and harder than written.",
+   "Long ride moved to Sunday: 53 km, 2:07 moving, HR 143 vs 2-2.5 hrs. Power meter didn't record, so no watts.",
+   "Volume about 4.1 h (bike 3.4 h, run 0.75 h), up from about 2.8 h in week 1.",
+   "Recovery markers good: HRV 7-day 93 vs baseline 88, resting HR 46.7 vs 46.6, sleep 6.9 h average with one very short night."
   ],
-  "focus": "Get at least 7 hours on the nights before Thursday and Saturday.",
+  "focus": "Ride and run the sessions as written: sweet spot at 205-215 W, easy at 5:20-5:45/km.",
   "flags": [
-   "Sleep under 6.5 h average",
-   "HRV below baseline"
+   "Long run short, no tempo",
+   "Long ride short",
+   "Power meter not recording"
   ]
  },
- "coach_history": [],
+ "coach_history": [
+  {
+   "week": 1,
+   "week_start": "2026-10-19",
+   "written": "2026-10-24",
+   "verdict": "Solid first week: FTP set, steady volume, but sleep is the limiter.",
+   "points": [
+    "FTP test: 245 W for 20 minutes, giving an FTP of 232 W. Pacing was dead even (best 10, 15 and 20 min all 245\u2013246 W) and you finished with a little left.",
+    "Cadence averaged about 68 rpm in the test. Aim for 80\u201390 rpm in bike sessions; most riders hold power better there.",
+    "Thursday's 10.3 km at 5:25/km: heart rate rose about 10 bpm at the same pace in the second half. On 4.9 hours' sleep that's expected, but easy runs should stay under about 145 bpm.",
+    "Sleep averaged 6.1 hours, with three nights under 5. Overnight HRV is 14% below your 4-week baseline. Sleep is the cheapest performance gain available right now."
+   ],
+   "focus": "Get at least 7 hours on the nights before Thursday and Saturday.",
+   "flags": [
+    "Sleep under 6.5 h average",
+    "HRV below baseline"
+   ]
+  }
+ ],
  "weekly": [
   {
    "start": "2026-08-17",
