@@ -1179,8 +1179,8 @@
   "rhr_7d": 47.2,
   "rhr_base": 46.6,
   "readiness_today": null,
-  "training_status": null,
-  "vo2max": null
+  "training_status": "MAINTAINING_2",
+  "vo2max": 57.3
  },
  "efficiency": [
   {
