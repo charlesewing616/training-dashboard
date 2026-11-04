@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T07:50+00:00",
+ "generated": "2026-11-04T09:36+00:00",
  "today": "2026-11-04",
  "week_no": 3,
  "race": {
@@ -241,59 +241,9 @@
    {
     "day": "Tue",
     "date": "2026-11-03",
-    "session": "Bike sweet spot (trainer), AM",
-    "target": "60 min: 3 x 10 min at 205-215 W, 5 min at 130 W between; 85-90 rpm. Still tired: 45 min easy at 130-155 W",
+    "session": "Run (instead of the bike session)",
+    "target": "Sweet spot ride not done; ran 7.1 km at 4:54/km, HR 161, last 2 km HR 176-181: the week's hard session",
     "tier": "B",
-    "workout": {
-     "sport": "bike",
-     "steps": [
-      {
-       "type": "warmup",
-       "min": 12,
-       "power": [
-        120,
-        170
-       ],
-       "cadence": [
-        85,
-        90
-       ]
-      },
-      {
-       "repeat": 3,
-       "steps": [
-        {
-         "type": "interval",
-         "min": 10,
-         "power": [
-          205,
-          215
-         ],
-         "cadence": [
-          85,
-          90
-         ]
-        },
-        {
-         "type": "recovery",
-         "min": 5,
-         "power": [
-          125,
-          135
-         ]
-        }
-       ]
-      },
-      {
-       "type": "cooldown",
-       "min": 3,
-       "power": [
-        110,
-        130
-       ]
-      }
-     ]
-    },
     "done": [
      {
       "sport": "run",
@@ -305,57 +255,68 @@
    {
     "day": "Wed",
     "date": "2026-11-04",
-    "session": "Long run (AM) + gym upper (PM)",
-    "target": "50 min: 15 min easy, 2 x 8 min at 4:20-4:30/km with 2 min jog, easy to 50 min; all easy if short on sleep",
+    "session": "No run; light gym upper + sauna (optional)",
+    "target": "Long run moves to Thursday. Upper, back, scapular work, 30-40 min, light; full rest if flat",
+    "tier": "C",
+    "done": []
+   },
+   {
+    "day": "Thu",
+    "date": "2026-11-05",
+    "session": "Long run, all easy",
+    "target": "45-50 min at 5:20-5:45/km, HR under 145, no tempo. Legs still sore: 30 min easy instead",
     "tier": "A",
     "workout": {
      "sport": "run",
+     "garmin_target": "hr",
      "steps": [
       {
        "type": "warmup",
-       "min": 15,
+       "min": 10,
+       "pace": [
+        "5:50",
+        "5:30"
+       ],
+       "hr": [
+        0,
+        140
+       ],
+       "note": "Ease in"
+      },
+      {
+       "type": "other",
+       "min": 35,
        "pace": [
         "5:45",
         "5:20"
        ],
-       "note": "Easy. Slept under 6.5 h? Whole run easy, HR under 145"
-      },
-      {
-       "repeat": 2,
-       "steps": [
-        {
-         "type": "interval",
-         "min": 8,
-         "pace": [
-          "4:30",
-          "4:20"
-         ]
-        },
-        {
-         "type": "recovery",
-         "min": 2,
-         "note": "Jog"
-        }
-       ]
+       "hr": [
+        0,
+        145
+       ],
+       "note": "All easy. Legs sore? Stop at 30 min"
       },
       {
        "type": "cooldown",
-       "min": 15,
+       "min": 5,
        "pace": [
-        "5:45",
-        "5:20"
+        "6:00",
+        "5:30"
        ],
-       "note": "Easy to 50 min"
+       "hr": [
+        0,
+        140
+       ]
       }
      ]
     },
     "done": []
    },
    {
-    "day": "Thu",
-    "date": "2026-11-05",
-    "session": "Easy spin",
-    "target": "45 min at 130-155 W, 90 rpm; skip Tuesday's session if missed",
+    "day": "Fri",
+    "date": "2026-11-06",
+    "session": "Easy spin (optional) or rest",
+    "target": "35 min at 130-150 W, 90 rpm, only if legs feel better; otherwise rest",
     "tier": "C",
     "workout": {
      "sport": "bike",
@@ -374,16 +335,16 @@
       },
       {
        "type": "other",
-       "min": 35,
+       "min": 25,
        "power": [
         130,
-        155
+        150
        ],
        "cadence": [
         85,
         95
        ],
-       "note": "Easy spin, nothing harder"
+       "note": "Easy, nothing harder"
       },
       {
        "type": "cooldown",
@@ -398,18 +359,10 @@
     "done": []
    },
    {
-    "day": "Fri",
-    "date": "2026-11-06",
-    "session": "Rest",
-    "target": "Off, or 15 min mobility",
-    "tier": "",
-    "done": []
-   },
-   {
     "day": "Sat",
     "date": "2026-11-07",
-    "session": "Tennis, sauna, light gym",
-    "target": "10 min knee/hip warm-up before tennis; no leg work",
+    "session": "David Lloyd relax session",
+    "target": "Sauna, pool, mobility. No leg work: long ride tomorrow",
     "tier": "",
     "done": []
    },
