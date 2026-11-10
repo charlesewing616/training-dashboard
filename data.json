@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-06T07:48+00:00",
- "today": "2026-11-06",
- "week_no": 3,
+ "generated": "2026-11-10T07:49+00:00",
+ "today": "2026-11-10",
+ "week_no": 4,
  "race": {
   "name": "Ironman 70.3 Oman",
   "place": "Muscat",
@@ -376,7 +376,13 @@
     "session": "Rest",
     "target": "Off, or 15 min mobility (you did tonight's intervals instead of Friday's spin)",
     "tier": "",
-    "done": []
+    "done": [
+     {
+      "sport": "strength",
+      "minutes": 82,
+      "km": null
+     }
+    ]
    },
    {
     "day": "Sat",
@@ -436,7 +442,13 @@
       }
      ]
     },
-    "done": []
+    "done": [
+     {
+      "sport": "bike",
+      "minutes": 102,
+      "km": null
+     }
+    ]
    }
   ]
  },
@@ -517,13 +529,6 @@
  ],
  "weekly": [
   {
-   "start": "2026-08-17",
-   "run": 1.37,
-   "bike": 2.4,
-   "swim": 0.0,
-   "strength": 0.0
-  },
-  {
    "start": "2026-08-24",
    "run": 0.33,
    "bike": 0.0,
@@ -596,6 +601,13 @@
   {
    "start": "2026-11-02",
    "run": 1.42,
+   "bike": 1.7,
+   "swim": 0.0,
+   "strength": 1.37
+  },
+  {
+   "start": "2026-11-09",
+   "run": 0.0,
    "bike": 0.0,
    "swim": 0.0,
    "strength": 0.0
@@ -616,7 +628,7 @@
    "weight": null,
    "hrv_7d": null,
    "rhr_7d": null,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-21",
@@ -632,7 +644,7 @@
    "weight": null,
    "hrv_7d": null,
    "rhr_7d": null,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-22",
@@ -648,7 +660,7 @@
    "weight": null,
    "hrv_7d": 104.3,
    "rhr_7d": 45.7,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-23",
@@ -664,7 +676,7 @@
    "weight": null,
    "hrv_7d": 105,
    "rhr_7d": 45.5,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-24",
@@ -680,7 +692,7 @@
    "weight": null,
    "hrv_7d": 104.2,
    "rhr_7d": 45.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-25",
@@ -696,7 +708,7 @@
    "weight": null,
    "hrv_7d": 102.7,
    "rhr_7d": 45.3,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-26",
@@ -712,7 +724,7 @@
    "weight": null,
    "hrv_7d": 96.3,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-27",
@@ -728,7 +740,7 @@
    "weight": null,
    "hrv_7d": 95.3,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-28",
@@ -744,7 +756,7 @@
    "weight": null,
    "hrv_7d": 94.6,
    "rhr_7d": 45.7,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-29",
@@ -760,7 +772,7 @@
    "weight": null,
    "hrv_7d": 95,
    "rhr_7d": 45.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-09-30",
@@ -776,7 +788,7 @@
    "weight": null,
    "hrv_7d": 92.7,
    "rhr_7d": 46.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-01",
@@ -792,7 +804,7 @@
    "weight": null,
    "hrv_7d": 93.7,
    "rhr_7d": 46.1,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-02",
@@ -808,7 +820,7 @@
    "weight": null,
    "hrv_7d": 97.3,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-03",
@@ -824,7 +836,7 @@
    "weight": null,
    "hrv_7d": 93.3,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-04",
@@ -840,7 +852,7 @@
    "weight": null,
    "hrv_7d": 97.9,
    "rhr_7d": 45.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-05",
@@ -856,7 +868,7 @@
    "weight": null,
    "hrv_7d": 94.9,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-06",
@@ -872,7 +884,7 @@
    "weight": null,
    "hrv_7d": 92.7,
    "rhr_7d": 46.1,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-07",
@@ -888,7 +900,7 @@
    "weight": null,
    "hrv_7d": 93.4,
    "rhr_7d": 45.3,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-08",
@@ -904,7 +916,7 @@
    "weight": null,
    "hrv_7d": 85.1,
    "rhr_7d": 46.3,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-09",
@@ -920,7 +932,7 @@
    "weight": null,
    "hrv_7d": 73,
    "rhr_7d": 47.1,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-10",
@@ -936,7 +948,7 @@
    "weight": null,
    "hrv_7d": 83.1,
    "rhr_7d": 46.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-11",
@@ -952,7 +964,7 @@
    "weight": null,
    "hrv_7d": 79.3,
    "rhr_7d": 46.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-12",
@@ -968,7 +980,7 @@
    "weight": null,
    "hrv_7d": 81.1,
    "rhr_7d": 46.3,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-13",
@@ -984,7 +996,7 @@
    "weight": null,
    "hrv_7d": 79.3,
    "rhr_7d": 47,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-14",
@@ -1000,7 +1012,7 @@
    "weight": null,
    "hrv_7d": 80.3,
    "rhr_7d": 46.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-15",
@@ -1016,7 +1028,7 @@
    "weight": null,
    "hrv_7d": 89,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-16",
@@ -1032,7 +1044,7 @@
    "weight": null,
    "hrv_7d": 95.3,
    "rhr_7d": 45.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-17",
@@ -1048,7 +1060,7 @@
    "weight": null,
    "hrv_7d": 94.3,
    "rhr_7d": 46.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-18",
@@ -1064,7 +1076,7 @@
    "weight": null,
    "hrv_7d": 91.5,
    "rhr_7d": 46.7,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-19",
@@ -1080,7 +1092,7 @@
    "weight": null,
    "hrv_7d": 90.4,
    "rhr_7d": 47,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-20",
@@ -1096,7 +1108,7 @@
    "weight": null,
    "hrv_7d": 95.2,
    "rhr_7d": 46.1,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-21",
@@ -1112,7 +1124,7 @@
    "weight": null,
    "hrv_7d": 90.6,
    "rhr_7d": 46.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-22",
@@ -1128,7 +1140,7 @@
    "weight": null,
    "hrv_7d": 77.8,
    "rhr_7d": 47.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-23",
@@ -1144,7 +1156,7 @@
    "weight": null,
    "hrv_7d": 82.2,
    "rhr_7d": 47.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-24",
@@ -1160,7 +1172,7 @@
    "weight": null,
    "hrv_7d": 78.5,
    "rhr_7d": 48.1,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-25",
@@ -1176,7 +1188,7 @@
    "weight": null,
    "hrv_7d": 83.8,
    "rhr_7d": 47.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-26",
@@ -1192,7 +1204,7 @@
    "weight": null,
    "hrv_7d": 86.4,
    "rhr_7d": 47.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-27",
@@ -1208,7 +1220,7 @@
    "weight": null,
    "hrv_7d": 87.1,
    "rhr_7d": 47.3,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-28",
@@ -1224,7 +1236,7 @@
    "weight": null,
    "hrv_7d": 90.9,
    "rhr_7d": 46.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-29",
@@ -1240,7 +1252,7 @@
    "weight": null,
    "hrv_7d": 98.9,
    "rhr_7d": 45.9,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-30",
@@ -1256,7 +1268,7 @@
    "weight": null,
    "hrv_7d": 98.1,
    "rhr_7d": 45.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-10-31",
@@ -1272,7 +1284,7 @@
    "weight": null,
    "hrv_7d": 94,
    "rhr_7d": 46.7,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-11-01",
@@ -1288,7 +1300,7 @@
    "weight": null,
    "hrv_7d": 93.1,
    "rhr_7d": 46.7,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-11-02",
@@ -1304,7 +1316,7 @@
    "weight": null,
    "hrv_7d": 95.9,
    "rhr_7d": 46.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-11-03",
@@ -1320,7 +1332,7 @@
    "weight": null,
    "hrv_7d": 95.9,
    "rhr_7d": 46.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-11-04",
@@ -1336,7 +1348,7 @@
    "weight": null,
    "hrv_7d": 95,
    "rhr_7d": 46.4,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-11-05",
@@ -1352,7 +1364,7 @@
    "weight": null,
    "hrv_7d": 95.3,
    "rhr_7d": 46.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
   },
   {
    "date": "2026-11-06",
@@ -1362,24 +1374,88 @@
    "hrv_low": 71,
    "hrv_high": 155,
    "rhr": 45,
-   "readiness": 75,
-   "acute": 410,
-   "chronic": 496,
+   "readiness": 55,
+   "acute": 577,
+   "chronic": 526,
    "weight": null,
    "hrv_7d": 96.1,
    "rhr_7d": 46.6,
-   "hrv_base": 87.5
+   "hrv_base": 88.9
+  },
+  {
+   "date": "2026-11-07",
+   "sleep_h": 6.18,
+   "sleep_score": 63,
+   "hrv": 86,
+   "hrv_low": 70,
+   "hrv_high": 155,
+   "rhr": 47,
+   "readiness": 42,
+   "acute": 582,
+   "chronic": 524,
+   "weight": null,
+   "hrv_7d": 104,
+   "rhr_7d": 44.7,
+   "hrv_base": 88.9
+  },
+  {
+   "date": "2026-11-08",
+   "sleep_h": 5.78,
+   "sleep_score": 36,
+   "hrv": 26,
+   "hrv_low": 71,
+   "hrv_high": 155,
+   "rhr": 49,
+   "readiness": 1,
+   "acute": 670,
+   "chronic": 536,
+   "weight": null,
+   "hrv_7d": 94.3,
+   "rhr_7d": 45.3,
+   "hrv_base": 88.9
+  },
+  {
+   "date": "2026-11-09",
+   "sleep_h": 9.55,
+   "sleep_score": 92,
+   "hrv": 110,
+   "hrv_low": 71,
+   "hrv_high": 156,
+   "rhr": 44,
+   "readiness": 50,
+   "acute": 560,
+   "chronic": 519,
+   "weight": null,
+   "hrv_7d": 92.7,
+   "rhr_7d": 45.4,
+   "hrv_base": 88.9
+  },
+  {
+   "date": "2026-11-10",
+   "sleep_h": 7.67,
+   "sleep_score": 88,
+   "hrv": 121,
+   "hrv_low": 71,
+   "hrv_high": 156,
+   "rhr": 42,
+   "readiness": 78,
+   "acute": 449,
+   "chronic": 504,
+   "weight": null,
+   "hrv_7d": 92.9,
+   "rhr_7d": 45.4,
+   "hrv_base": 88.9
   }
  ],
  "recovery": {
-  "sleep_7d": 6.9,
+  "sleep_7d": 7.1,
   "sleep_base": 6.7,
-  "hrv_7d": 96.1,
-  "hrv_base": 87.5,
-  "rhr_7d": 46.6,
-  "rhr_base": 46.5,
-  "readiness_today": 75,
-  "training_status": "PRODUCTIVE_3",
+  "hrv_7d": 92.9,
+  "hrv_base": 88.9,
+  "rhr_7d": 45.4,
+  "rhr_base": 46.7,
+  "readiness_today": 78,
+  "training_status": "MAINTAINING_4",
   "vo2max": 57.3
  },
  "efficiency": [
@@ -1451,6 +1527,30 @@
   }
  ],
  "recent": [
+  {
+   "date": "2026-11-08",
+   "sport": "bike",
+   "minutes": 102,
+   "km": null,
+   "avg_hr": 143,
+   "pace_s_km": null,
+   "avg_power": null,
+   "load": 142,
+   "aerobic_te": 3.5999999046325684,
+   "track": false
+  },
+  {
+   "date": "2026-11-06",
+   "sport": "strength",
+   "minutes": 82,
+   "km": null,
+   "avg_hr": 137,
+   "pace_s_km": null,
+   "avg_power": null,
+   "load": 132,
+   "aerobic_te": 2.9000000953674316,
+   "track": false
+  },
   {
    "date": "2026-11-05",
    "sport": "run",
@@ -1545,30 +1645,6 @@
    "avg_power": 195,
    "load": null,
    "aerobic_te": null,
-   "track": false
-  },
-  {
-   "date": "2026-10-19",
-   "sport": "run",
-   "minutes": 26,
-   "km": 5.2,
-   "avg_hr": 138,
-   "pace_s_km": 298,
-   "avg_power": null,
-   "load": 71,
-   "aerobic_te": 2.799999952316284,
-   "track": false
-  },
-  {
-   "date": "2026-10-17",
-   "sport": "bike",
-   "minutes": 189,
-   "km": 71.2,
-   "avg_hr": 131,
-   "pace_s_km": null,
-   "avg_power": null,
-   "load": 280,
-   "aerobic_te": 4.599999904632568,
    "track": false
   }
  ]
