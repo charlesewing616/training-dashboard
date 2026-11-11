@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T20:09+00:00",
+ "generated": "2026-11-11T21:03+00:00",
  "today": "2026-11-11",
  "week_no": 4,
  "race": {
@@ -1485,74 +1485,1470 @@
   "training_status": "PRODUCTIVE_9",
   "vo2max": 57.7
  },
- "efficiency": [
-  {
-   "date": "2026-08-01",
-   "ef": 1.295,
-   "pace_s_km": 324,
-   "avg_hr": 143
+ "progress": {
+  "ref_hr": 140,
+  "rest_hr": 47,
+  "pmc": [
+   {
+    "date": "2026-07-15",
+    "load": 0,
+    "fitness": 103.1,
+    "fatigue": 127.3,
+    "form": -43.0
+   },
+   {
+    "date": "2026-07-16",
+    "load": 0,
+    "fitness": 100.6,
+    "fatigue": 109.1,
+    "form": -24.3
+   },
+   {
+    "date": "2026-07-17",
+    "load": 0,
+    "fitness": 98.2,
+    "fatigue": 93.5,
+    "form": -8.5
+   },
+   {
+    "date": "2026-07-18",
+    "load": 0,
+    "fitness": 95.9,
+    "fatigue": 80.2,
+    "form": 4.7
+   },
+   {
+    "date": "2026-07-19",
+    "load": 177,
+    "fitness": 97.8,
+    "fatigue": 94.0,
+    "form": 15.7
+   },
+   {
+    "date": "2026-07-20",
+    "load": 0,
+    "fitness": 95.5,
+    "fatigue": 80.6,
+    "form": 3.8
+   },
+   {
+    "date": "2026-07-21",
+    "load": 0,
+    "fitness": 93.2,
+    "fatigue": 69.1,
+    "form": 14.9
+   },
+   {
+    "date": "2026-07-22",
+    "load": 0,
+    "fitness": 91.0,
+    "fatigue": 59.2,
+    "form": 24.1
+   },
+   {
+    "date": "2026-07-23",
+    "load": 0,
+    "fitness": 88.8,
+    "fatigue": 50.8,
+    "form": 31.8
+   },
+   {
+    "date": "2026-07-24",
+    "load": 0,
+    "fitness": 86.7,
+    "fatigue": 43.5,
+    "form": 38.1
+   },
+   {
+    "date": "2026-07-25",
+    "load": 279,
+    "fitness": 91.3,
+    "fatigue": 77.2,
+    "form": 43.2
+   },
+   {
+    "date": "2026-07-26",
+    "load": 0,
+    "fitness": 89.1,
+    "fatigue": 66.2,
+    "form": 14.1
+   },
+   {
+    "date": "2026-07-27",
+    "load": 0,
+    "fitness": 87.0,
+    "fatigue": 56.7,
+    "form": 23.0
+   },
+   {
+    "date": "2026-07-28",
+    "load": 375,
+    "fitness": 93.9,
+    "fatigue": 102.2,
+    "form": 30.3
+   },
+   {
+    "date": "2026-07-29",
+    "load": 0,
+    "fitness": 91.6,
+    "fatigue": 87.6,
+    "form": -8.4
+   },
+   {
+    "date": "2026-07-30",
+    "load": 107,
+    "fitness": 92.0,
+    "fatigue": 90.4,
+    "form": 4.0
+   },
+   {
+    "date": "2026-07-31",
+    "load": 0,
+    "fitness": 89.8,
+    "fatigue": 77.5,
+    "form": 1.6
+   },
+   {
+    "date": "2026-08-01",
+    "load": 102,
+    "fitness": 90.1,
+    "fatigue": 80.9,
+    "form": 12.3
+   },
+   {
+    "date": "2026-08-02",
+    "load": 0,
+    "fitness": 87.9,
+    "fatigue": 69.4,
+    "form": 9.2
+   },
+   {
+    "date": "2026-08-03",
+    "load": 0,
+    "fitness": 85.8,
+    "fatigue": 59.5,
+    "form": 18.6
+   },
+   {
+    "date": "2026-08-04",
+    "load": 115,
+    "fitness": 86.5,
+    "fatigue": 67.3,
+    "form": 26.4
+   },
+   {
+    "date": "2026-08-05",
+    "load": 0,
+    "fitness": 84.5,
+    "fatigue": 57.7,
+    "form": 19.2
+   },
+   {
+    "date": "2026-08-06",
+    "load": 0,
+    "fitness": 82.5,
+    "fatigue": 49.5,
+    "form": 26.8
+   },
+   {
+    "date": "2026-08-07",
+    "load": 150,
+    "fitness": 84.1,
+    "fatigue": 63.8,
+    "form": 33.0
+   },
+   {
+    "date": "2026-08-08",
+    "load": 0,
+    "fitness": 82.1,
+    "fatigue": 54.7,
+    "form": 20.2
+   },
+   {
+    "date": "2026-08-09",
+    "load": 96,
+    "fitness": 82.4,
+    "fatigue": 60.7,
+    "form": 27.3
+   },
+   {
+    "date": "2026-08-10",
+    "load": 0,
+    "fitness": 80.4,
+    "fatigue": 52.0,
+    "form": 21.7
+   },
+   {
+    "date": "2026-08-11",
+    "load": 0,
+    "fitness": 78.5,
+    "fatigue": 44.6,
+    "form": 28.4
+   },
+   {
+    "date": "2026-08-12",
+    "load": 0,
+    "fitness": 76.7,
+    "fatigue": 38.2,
+    "form": 34.0
+   },
+   {
+    "date": "2026-08-13",
+    "load": 234,
+    "fitness": 80.4,
+    "fatigue": 66.2,
+    "form": 38.4
+   },
+   {
+    "date": "2026-08-14",
+    "load": 0,
+    "fitness": 78.5,
+    "fatigue": 56.8,
+    "form": 14.2
+   },
+   {
+    "date": "2026-08-15",
+    "load": 0,
+    "fitness": 76.6,
+    "fatigue": 48.7,
+    "form": 21.7
+   },
+   {
+    "date": "2026-08-16",
+    "load": 86,
+    "fitness": 76.9,
+    "fatigue": 54.0,
+    "form": 28.0
+   },
+   {
+    "date": "2026-08-17",
+    "load": 0,
+    "fitness": 75.0,
+    "fatigue": 46.3,
+    "form": 22.8
+   },
+   {
+    "date": "2026-08-18",
+    "load": 0,
+    "fitness": 73.2,
+    "fatigue": 39.7,
+    "form": 28.7
+   },
+   {
+    "date": "2026-08-19",
+    "load": 0,
+    "fitness": 71.5,
+    "fatigue": 34.0,
+    "form": 33.6
+   },
+   {
+    "date": "2026-08-20",
+    "load": 0,
+    "fitness": 69.8,
+    "fatigue": 29.2,
+    "form": 37.5
+   },
+   {
+    "date": "2026-08-21",
+    "load": 70,
+    "fitness": 69.8,
+    "fatigue": 35.0,
+    "form": 40.6
+   },
+   {
+    "date": "2026-08-22",
+    "load": 376,
+    "fitness": 77.1,
+    "fatigue": 83.7,
+    "form": 34.8
+   },
+   {
+    "date": "2026-08-23",
+    "load": 81,
+    "fitness": 77.2,
+    "fatigue": 83.4,
+    "form": -6.6
+   },
+   {
+    "date": "2026-08-24",
+    "load": 0,
+    "fitness": 75.4,
+    "fatigue": 71.5,
+    "form": -6.2
+   },
+   {
+    "date": "2026-08-25",
+    "load": 0,
+    "fitness": 73.6,
+    "fatigue": 61.2,
+    "form": 3.9
+   },
+   {
+    "date": "2026-08-26",
+    "load": 0,
+    "fitness": 71.8,
+    "fatigue": 52.5,
+    "form": 12.3
+   },
+   {
+    "date": "2026-08-27",
+    "load": 0,
+    "fitness": 70.1,
+    "fatigue": 45.0,
+    "form": 19.3
+   },
+   {
+    "date": "2026-08-28",
+    "load": 0,
+    "fitness": 68.4,
+    "fatigue": 38.6,
+    "form": 25.1
+   },
+   {
+    "date": "2026-08-29",
+    "load": 133,
+    "fitness": 70.0,
+    "fatigue": 52.1,
+    "form": 29.9
+   },
+   {
+    "date": "2026-08-30",
+    "load": 0,
+    "fitness": 68.3,
+    "fatigue": 44.6,
+    "form": 17.9
+   },
+   {
+    "date": "2026-08-31",
+    "load": 0,
+    "fitness": 66.7,
+    "fatigue": 38.3,
+    "form": 23.7
+   },
+   {
+    "date": "2026-09-01",
+    "load": 0,
+    "fitness": 65.1,
+    "fatigue": 32.8,
+    "form": 28.4
+   },
+   {
+    "date": "2026-09-02",
+    "load": 0,
+    "fitness": 63.5,
+    "fatigue": 28.1,
+    "form": 32.3
+   },
+   {
+    "date": "2026-09-03",
+    "load": 0,
+    "fitness": 62.0,
+    "fatigue": 24.1,
+    "form": 35.4
+   },
+   {
+    "date": "2026-09-04",
+    "load": 0,
+    "fitness": 60.6,
+    "fatigue": 20.7,
+    "form": 37.9
+   },
+   {
+    "date": "2026-09-05",
+    "load": 130,
+    "fitness": 62.2,
+    "fatigue": 36.3,
+    "form": 39.9
+   },
+   {
+    "date": "2026-09-06",
+    "load": 103,
+    "fitness": 63.2,
+    "fatigue": 45.9,
+    "form": 25.9
+   },
+   {
+    "date": "2026-09-07",
+    "load": 0,
+    "fitness": 61.7,
+    "fatigue": 39.3,
+    "form": 17.3
+   },
+   {
+    "date": "2026-09-08",
+    "load": 0,
+    "fitness": 60.2,
+    "fatigue": 33.7,
+    "form": 22.4
+   },
+   {
+    "date": "2026-09-09",
+    "load": 0,
+    "fitness": 58.8,
+    "fatigue": 28.9,
+    "form": 26.5
+   },
+   {
+    "date": "2026-09-10",
+    "load": 0,
+    "fitness": 57.4,
+    "fatigue": 24.8,
+    "form": 29.9
+   },
+   {
+    "date": "2026-09-11",
+    "load": 0,
+    "fitness": 56.0,
+    "fatigue": 21.2,
+    "form": 32.6
+   },
+   {
+    "date": "2026-09-12",
+    "load": 0,
+    "fitness": 54.7,
+    "fatigue": 18.2,
+    "form": 34.8
+   },
+   {
+    "date": "2026-09-13",
+    "load": 0,
+    "fitness": 53.4,
+    "fatigue": 15.6,
+    "form": 36.5
+   },
+   {
+    "date": "2026-09-14",
+    "load": 182,
+    "fitness": 56.4,
+    "fatigue": 39.3,
+    "form": 37.8
+   },
+   {
+    "date": "2026-09-15",
+    "load": 112,
+    "fitness": 57.8,
+    "fatigue": 49.8,
+    "form": 17.1
+   },
+   {
+    "date": "2026-09-16",
+    "load": 0,
+    "fitness": 56.4,
+    "fatigue": 42.7,
+    "form": 8.0
+   },
+   {
+    "date": "2026-09-17",
+    "load": 0,
+    "fitness": 55.0,
+    "fatigue": 36.6,
+    "form": 13.7
+   },
+   {
+    "date": "2026-09-18",
+    "load": 0,
+    "fitness": 53.7,
+    "fatigue": 31.3,
+    "form": 18.5
+   },
+   {
+    "date": "2026-09-19",
+    "load": 0,
+    "fitness": 52.5,
+    "fatigue": 26.9,
+    "form": 22.4
+   },
+   {
+    "date": "2026-09-20",
+    "load": 87,
+    "fitness": 53.3,
+    "fatigue": 35.4,
+    "form": 25.6
+   },
+   {
+    "date": "2026-09-21",
+    "load": 0,
+    "fitness": 52.0,
+    "fatigue": 30.4,
+    "form": 17.9
+   },
+   {
+    "date": "2026-09-22",
+    "load": 0,
+    "fitness": 50.8,
+    "fatigue": 26.0,
+    "form": 21.6
+   },
+   {
+    "date": "2026-09-23",
+    "load": 85,
+    "fitness": 51.6,
+    "fatigue": 34.4,
+    "form": 24.7
+   },
+   {
+    "date": "2026-09-24",
+    "load": 0,
+    "fitness": 50.3,
+    "fatigue": 29.5,
+    "form": 17.2
+   },
+   {
+    "date": "2026-09-25",
+    "load": 136,
+    "fitness": 52.4,
+    "fatigue": 44.7,
+    "form": 20.9
+   },
+   {
+    "date": "2026-09-26",
+    "load": 0,
+    "fitness": 51.1,
+    "fatigue": 38.3,
+    "form": 7.7
+   },
+   {
+    "date": "2026-09-27",
+    "load": 0,
+    "fitness": 49.9,
+    "fatigue": 32.8,
+    "form": 12.8
+   },
+   {
+    "date": "2026-09-28",
+    "load": 0,
+    "fitness": 48.7,
+    "fatigue": 28.2,
+    "form": 17.1
+   },
+   {
+    "date": "2026-09-29",
+    "load": 409,
+    "fitness": 57.3,
+    "fatigue": 82.5,
+    "form": 20.6
+   },
+   {
+    "date": "2026-09-30",
+    "load": 0,
+    "fitness": 55.9,
+    "fatigue": 70.7,
+    "form": -25.2
+   },
+   {
+    "date": "2026-10-01",
+    "load": 0,
+    "fitness": 54.6,
+    "fatigue": 60.6,
+    "form": -14.8
+   },
+   {
+    "date": "2026-10-02",
+    "load": 0,
+    "fitness": 53.3,
+    "fatigue": 52.0,
+    "form": -6.0
+   },
+   {
+    "date": "2026-10-03",
+    "load": 0,
+    "fitness": 52.0,
+    "fatigue": 44.5,
+    "form": 1.3
+   },
+   {
+    "date": "2026-10-04",
+    "load": 226,
+    "fitness": 56.2,
+    "fatigue": 70.5,
+    "form": 7.5
+   },
+   {
+    "date": "2026-10-05",
+    "load": 100,
+    "fitness": 57.2,
+    "fatigue": 74.7,
+    "form": -14.3
+   },
+   {
+    "date": "2026-10-06",
+    "load": 0,
+    "fitness": 55.9,
+    "fatigue": 64.0,
+    "form": -17.5
+   },
+   {
+    "date": "2026-10-07",
+    "load": 128,
+    "fitness": 57.6,
+    "fatigue": 73.1,
+    "form": -8.2
+   },
+   {
+    "date": "2026-10-08",
+    "load": 0,
+    "fitness": 56.2,
+    "fatigue": 62.7,
+    "form": -15.5
+   },
+   {
+    "date": "2026-10-09",
+    "load": 0,
+    "fitness": 54.9,
+    "fatigue": 53.7,
+    "form": -6.5
+   },
+   {
+    "date": "2026-10-10",
+    "load": 0,
+    "fitness": 53.6,
+    "fatigue": 46.0,
+    "form": 1.2
+   },
+   {
+    "date": "2026-10-11",
+    "load": 145,
+    "fitness": 55.7,
+    "fatigue": 60.1,
+    "form": 7.5
+   },
+   {
+    "date": "2026-10-12",
+    "load": 0,
+    "fitness": 54.4,
+    "fatigue": 51.5,
+    "form": -4.4
+   },
+   {
+    "date": "2026-10-13",
+    "load": 345,
+    "fitness": 61.3,
+    "fatigue": 93.4,
+    "form": 2.9
+   },
+   {
+    "date": "2026-10-14",
+    "load": 0,
+    "fitness": 59.9,
+    "fatigue": 80.1,
+    "form": -32.1
+   },
+   {
+    "date": "2026-10-15",
+    "load": 0,
+    "fitness": 58.4,
+    "fatigue": 68.6,
+    "form": -20.2
+   },
+   {
+    "date": "2026-10-16",
+    "load": 439,
+    "fitness": 67.5,
+    "fatigue": 121.6,
+    "form": -10.2
+   },
+   {
+    "date": "2026-10-17",
+    "load": 280,
+    "fitness": 72.5,
+    "fatigue": 144.1,
+    "form": -54.1
+   },
+   {
+    "date": "2026-10-18",
+    "load": 0,
+    "fitness": 70.8,
+    "fatigue": 123.6,
+    "form": -71.6
+   },
+   {
+    "date": "2026-10-19",
+    "load": 71,
+    "fitness": 70.8,
+    "fatigue": 116.0,
+    "form": -52.7
+   },
+   {
+    "date": "2026-10-20",
+    "load": 97,
+    "fitness": 71.4,
+    "fatigue": 113.3,
+    "form": -45.2
+   },
+   {
+    "date": "2026-10-21",
+    "load": 0,
+    "fitness": 69.7,
+    "fatigue": 97.1,
+    "form": -41.9
+   },
+   {
+    "date": "2026-10-22",
+    "load": 111,
+    "fitness": 70.7,
+    "fatigue": 99.1,
+    "form": -27.4
+   },
+   {
+    "date": "2026-10-23",
+    "load": 0,
+    "fitness": 69.0,
+    "fatigue": 85.0,
+    "form": -28.4
+   },
+   {
+    "date": "2026-10-24",
+    "load": 0,
+    "fitness": 67.4,
+    "fatigue": 72.8,
+    "form": -15.9
+   },
+   {
+    "date": "2026-10-25",
+    "load": 206,
+    "fitness": 70.7,
+    "fatigue": 91.8,
+    "form": -5.4
+   },
+   {
+    "date": "2026-10-26",
+    "load": 0,
+    "fitness": 69.0,
+    "fatigue": 78.7,
+    "form": -21.1
+   },
+   {
+    "date": "2026-10-27",
+    "load": 86,
+    "fitness": 69.4,
+    "fatigue": 79.7,
+    "form": -9.7
+   },
+   {
+    "date": "2026-10-28",
+    "load": 94,
+    "fitness": 70.0,
+    "fatigue": 81.7,
+    "form": -10.3
+   },
+   {
+    "date": "2026-10-29",
+    "load": 0,
+    "fitness": 68.3,
+    "fatigue": 70.1,
+    "form": -11.8
+   },
+   {
+    "date": "2026-10-30",
+    "load": 0,
+    "fitness": 66.7,
+    "fatigue": 60.1,
+    "form": -1.7
+   },
+   {
+    "date": "2026-10-31",
+    "load": 0,
+    "fitness": 65.1,
+    "fatigue": 51.5,
+    "form": 6.6
+   },
+   {
+    "date": "2026-11-01",
+    "load": 305,
+    "fitness": 70.8,
+    "fatigue": 87.7,
+    "form": 13.6
+   },
+   {
+    "date": "2026-11-02",
+    "load": 0,
+    "fitness": 69.1,
+    "fatigue": 75.2,
+    "form": -16.9
+   },
+   {
+    "date": "2026-11-03",
+    "load": 146,
+    "fitness": 71.0,
+    "fatigue": 85.3,
+    "form": -6.1
+   },
+   {
+    "date": "2026-11-04",
+    "load": 0,
+    "fitness": 69.3,
+    "fatigue": 73.1,
+    "form": -14.3
+   },
+   {
+    "date": "2026-11-05",
+    "load": 64,
+    "fitness": 69.2,
+    "fatigue": 71.8,
+    "form": -3.8
+   },
+   {
+    "date": "2026-11-06",
+    "load": 132,
+    "fitness": 70.6,
+    "fatigue": 80.4,
+    "form": -2.7
+   },
+   {
+    "date": "2026-11-07",
+    "load": 77,
+    "fitness": 70.8,
+    "fatigue": 80.0,
+    "form": -9.8
+   },
+   {
+    "date": "2026-11-08",
+    "load": 142,
+    "fitness": 72.5,
+    "fatigue": 88.8,
+    "form": -9.2
+   },
+   {
+    "date": "2026-11-09",
+    "load": 0,
+    "fitness": 70.8,
+    "fatigue": 76.1,
+    "form": -16.3
+   },
+   {
+    "date": "2026-11-10",
+    "load": 357,
+    "fitness": 77.6,
+    "fatigue": 116.2,
+    "form": -5.4
+   },
+   {
+    "date": "2026-11-11",
+    "load": 0,
+    "fitness": 75.7,
+    "fatigue": 99.6,
+    "form": -38.6
+   }
+  ],
+  "run_pace": [
+   {
+    "date": "2026-07-25",
+    "pace_s_km": 341,
+    "actual_pace_s_km": 294,
+    "avg_hr": 155,
+    "minutes": 75,
+    "pace_s_km_trend": null
+   },
+   {
+    "date": "2026-08-01",
+    "pace_s_km": 334,
+    "actual_pace_s_km": 324,
+    "avg_hr": 143,
+    "minutes": 36,
+    "pace_s_km_trend": null
+   },
+   {
+    "date": "2026-08-04",
+    "pace_s_km": 331,
+    "actual_pace_s_km": 285,
+    "avg_hr": 155,
+    "minutes": 29,
+    "pace_s_km_trend": 335.3
+   },
+   {
+    "date": "2026-08-09",
+    "pace_s_km": 344,
+    "actual_pace_s_km": 297,
+    "avg_hr": 155,
+    "minutes": 21,
+    "pace_s_km_trend": 337.5
+   },
+   {
+    "date": "2026-08-16",
+    "pace_s_km": 335,
+    "actual_pace_s_km": 315,
+    "avg_hr": 146,
+    "minutes": 29,
+    "pace_s_km_trend": 337
+   },
+   {
+    "date": "2026-08-21",
+    "pace_s_km": 295,
+    "actual_pace_s_km": 286,
+    "avg_hr": 143,
+    "minutes": 21,
+    "pace_s_km_trend": 327.8
+   },
+   {
+    "date": "2026-08-23",
+    "pace_s_km": 356,
+    "actual_pace_s_km": 371,
+    "avg_hr": 136,
+    "minutes": 61,
+    "pace_s_km_trend": 332.2
+   },
+   {
+    "date": "2026-09-06",
+    "pace_s_km": 358,
+    "actual_pace_s_km": 308,
+    "avg_hr": 155,
+    "minutes": 32,
+    "pace_s_km_trend": 337.6
+   },
+   {
+    "date": "2026-09-20",
+    "pace_s_km": 301,
+    "actual_pace_s_km": 301,
+    "avg_hr": 140,
+    "minutes": 31,
+    "pace_s_km_trend": 329
+   },
+   {
+    "date": "2026-10-05",
+    "pace_s_km": 333,
+    "actual_pace_s_km": 292,
+    "avg_hr": 153,
+    "minutes": 26,
+    "pace_s_km_trend": 328.6
+   },
+   {
+    "date": "2026-10-11",
+    "pace_s_km": 341,
+    "actual_pace_s_km": 365,
+    "avg_hr": 134,
+    "minutes": 129,
+    "pace_s_km_trend": 337.8
+   },
+   {
+    "date": "2026-10-19",
+    "pace_s_km": 291,
+    "actual_pace_s_km": 298,
+    "avg_hr": 138,
+    "minutes": 26,
+    "pace_s_km_trend": 324.8
+   },
+   {
+    "date": "2026-10-22",
+    "pace_s_km": 340,
+    "actual_pace_s_km": 326,
+    "avg_hr": 144,
+    "minutes": 56,
+    "pace_s_km_trend": 321.2
+   },
+   {
+    "date": "2026-10-28",
+    "pace_s_km": 321,
+    "actual_pace_s_km": 311,
+    "avg_hr": 143,
+    "minutes": 46,
+    "pace_s_km_trend": 325.2
+   },
+   {
+    "date": "2026-11-05",
+    "pace_s_km": 341,
+    "actual_pace_s_km": 353,
+    "avg_hr": 137,
+    "minutes": 50,
+    "pace_s_km_trend": 326.8
+   }
+  ],
+  "bike_watts": [],
+  "vo2max": [
+   {
+    "date": "2026-07-04",
+    "vo2max": 51.0
+   },
+   {
+    "date": "2026-07-07",
+    "vo2max": 51.0
+   },
+   {
+    "date": "2026-07-10",
+    "vo2max": 53.0
+   },
+   {
+    "date": "2026-07-14",
+    "vo2max": 54.0
+   },
+   {
+    "date": "2026-07-19",
+    "vo2max": 54.0
+   },
+   {
+    "date": "2026-07-25",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-07-28",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-08-01",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-08-04",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-08-09",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-08-16",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-08-21",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-08-23",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-08-29",
+    "vo2max": 59.0
+   },
+   {
+    "date": "2026-09-05",
+    "vo2max": 58.0
+   },
+   {
+    "date": "2026-09-06",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-09-14",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-09-20",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-09-23",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-09-25",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-09-29",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-10-05",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-10-07",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-10-11",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-10-13",
+    "vo2max": 56.0
+   },
+   {
+    "date": "2026-10-19",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-10-22",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-10-25",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-10-28",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-11-03",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-11-05",
+    "vo2max": 57.0
+   },
+   {
+    "date": "2026-11-10",
+    "vo2max": 58.0
+   }
+  ],
+  "headline": {
+   "weeks_back": 6,
+   "fitness": {
+    "now": 75.7,
+    "then": 55.9,
+    "change": 19.8
+   },
+   "form": -38.6,
+   "run_pace": {
+    "now": 326.8,
+    "then": 329,
+    "change": -2.2
+   },
+   "bike_watts": {
+    "now": null,
+    "then": null,
+    "change": null
+   },
+   "vo2max": {
+    "now": 58.0,
+    "first": 51.0,
+    "first_date": "2026-07-04"
+   }
   },
-  {
-   "date": "2026-08-16",
-   "ef": 1.305,
-   "pace_s_km": 315,
-   "avg_hr": 146
-  },
-  {
-   "date": "2026-08-21",
-   "ef": 1.467,
-   "pace_s_km": 286,
-   "avg_hr": 143
-  },
-  {
-   "date": "2026-08-23",
-   "ef": 1.189,
-   "pace_s_km": 371,
-   "avg_hr": 136
-  },
-  {
-   "date": "2026-09-20",
-   "ef": 1.424,
-   "pace_s_km": 301,
-   "avg_hr": 140
-  },
-  {
-   "date": "2026-10-05",
-   "ef": 1.343,
-   "pace_s_km": 292,
-   "avg_hr": 153
-  },
-  {
-   "date": "2026-10-11",
-   "ef": 1.227,
-   "pace_s_km": 365,
-   "avg_hr": 134
-  },
-  {
-   "date": "2026-10-19",
-   "ef": 1.459,
-   "pace_s_km": 298,
-   "avg_hr": 138
-  },
-  {
-   "date": "2026-10-22",
-   "ef": 1.278,
-   "pace_s_km": 326,
-   "avg_hr": 144
-  },
-  {
-   "date": "2026-10-28",
-   "ef": 1.349,
-   "pace_s_km": 311,
-   "avg_hr": 143
-  },
-  {
-   "date": "2026-11-05",
-   "ef": 1.241,
-   "pace_s_km": 353,
-   "avg_hr": 137
-  }
- ],
+  "weekly": [
+   {
+    "start": "2026-08-24",
+    "run_km": 5.0,
+    "run_min": 20,
+    "runs": 1,
+    "long_run_min": 20,
+    "long_run_target": null,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 133,
+    "current": false,
+    "ramp_pct": -75
+   },
+   {
+    "start": "2026-08-31",
+    "run_km": 13.2,
+    "run_min": 66,
+    "runs": 2,
+    "long_run_min": 34,
+    "long_run_target": null,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 233,
+    "current": false,
+    "ramp_pct": 75
+   },
+   {
+    "start": "2026-09-07",
+    "run_km": 0.0,
+    "run_min": 0,
+    "runs": 0,
+    "long_run_min": 0,
+    "long_run_target": null,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 0,
+    "current": false,
+    "ramp_pct": -100
+   },
+   {
+    "start": "2026-09-14",
+    "run_km": 10.9,
+    "run_min": 50,
+    "runs": 2,
+    "long_run_min": 31,
+    "long_run_target": null,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 381,
+    "current": false,
+    "ramp_pct": null
+   },
+   {
+    "start": "2026-09-21",
+    "run_km": 16.2,
+    "run_min": 84,
+    "runs": 2,
+    "long_run_min": 60,
+    "long_run_target": null,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 221,
+    "current": false,
+    "ramp_pct": -42
+   },
+   {
+    "start": "2026-09-28",
+    "run_km": 5.2,
+    "run_min": 22,
+    "runs": 1,
+    "long_run_min": 22,
+    "long_run_target": null,
+    "bike_min": 115,
+    "rides": 1,
+    "long_ride_min": 115,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 635,
+    "current": false,
+    "ramp_pct": 187
+   },
+   {
+    "start": "2026-10-05",
+    "run_km": 33.2,
+    "run_min": 188,
+    "runs": 3,
+    "long_run_min": 129,
+    "long_run_target": null,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 372,
+    "current": false,
+    "ramp_pct": -41
+   },
+   {
+    "start": "2026-10-12",
+    "run_km": 2.6,
+    "run_min": 9,
+    "runs": 1,
+    "long_run_min": 9,
+    "long_run_target": null,
+    "bike_min": 486,
+    "rides": 2,
+    "long_ride_min": 296,
+    "long_ride_target": null,
+    "swim_km": 0.0,
+    "load": 1063,
+    "current": false,
+    "ramp_pct": 186
+   },
+   {
+    "start": "2026-10-19",
+    "run_km": 23.1,
+    "run_min": 129,
+    "runs": 3,
+    "long_run_min": 56,
+    "long_run_target": null,
+    "bike_min": 41,
+    "rides": 1,
+    "long_ride_min": 41,
+    "long_ride_target": 120,
+    "swim_km": 0.0,
+    "load": 485,
+    "current": false,
+    "ramp_pct": -54
+   },
+   {
+    "start": "2026-10-26",
+    "run_km": 9.0,
+    "run_min": 46,
+    "runs": 1,
+    "long_run_min": 46,
+    "long_run_target": 60,
+    "bike_min": 172,
+    "rides": 2,
+    "long_ride_min": 128,
+    "long_ride_target": 150,
+    "swim_km": 0.0,
+    "load": 485,
+    "current": false,
+    "ramp_pct": 0
+   },
+   {
+    "start": "2026-11-02",
+    "run_km": 15.6,
+    "run_min": 85,
+    "runs": 2,
+    "long_run_min": 50,
+    "long_run_target": 50,
+    "bike_min": 102,
+    "rides": 1,
+    "long_ride_min": 102,
+    "long_ride_target": 120,
+    "swim_km": 0.0,
+    "load": 561,
+    "current": false,
+    "ramp_pct": 16
+   },
+   {
+    "start": "2026-11-09",
+    "run_km": 6.3,
+    "run_min": 21,
+    "runs": 1,
+    "long_run_min": 21,
+    "long_run_target": 70,
+    "bike_min": 0,
+    "rides": 0,
+    "long_ride_min": 0,
+    "long_ride_target": 150,
+    "swim_km": 0.0,
+    "load": 357,
+    "current": true,
+    "ramp_pct": -36
+   }
+  ],
+  "cadence": [
+   {
+    "date": "2026-07-04",
+    "spm": 164,
+    "spm_trend": null
+   },
+   {
+    "date": "2026-07-10",
+    "spm": 164,
+    "spm_trend": null
+   },
+   {
+    "date": "2026-07-19",
+    "spm": 166,
+    "spm_trend": 164.7
+   },
+   {
+    "date": "2026-07-25",
+    "spm": 165,
+    "spm_trend": 164.8
+   },
+   {
+    "date": "2026-07-28",
+    "spm": 130,
+    "spm_trend": 157.8
+   },
+   {
+    "date": "2026-08-01",
+    "spm": 160,
+    "spm_trend": 157
+   },
+   {
+    "date": "2026-08-04",
+    "spm": 165,
+    "spm_trend": 157.2
+   },
+   {
+    "date": "2026-08-07",
+    "spm": 136,
+    "spm_trend": 151.2
+   },
+   {
+    "date": "2026-08-09",
+    "spm": 165,
+    "spm_trend": 151.2
+   },
+   {
+    "date": "2026-08-16",
+    "spm": 161,
+    "spm_trend": 157.4
+   },
+   {
+    "date": "2026-08-21",
+    "spm": 166,
+    "spm_trend": 158.6
+   },
+   {
+    "date": "2026-08-23",
+    "spm": 159,
+    "spm_trend": 157.4
+   },
+   {
+    "date": "2026-08-29",
+    "spm": 172,
+    "spm_trend": 164.6
+   },
+   {
+    "date": "2026-09-05",
+    "spm": 164,
+    "spm_trend": 164.4
+   },
+   {
+    "date": "2026-09-06",
+    "spm": 167,
+    "spm_trend": 165.6
+   },
+   {
+    "date": "2026-09-14",
+    "spm": 163,
+    "spm_trend": 165
+   },
+   {
+    "date": "2026-09-20",
+    "spm": 163,
+    "spm_trend": 165.8
+   },
+   {
+    "date": "2026-09-23",
+    "spm": 161,
+    "spm_trend": 163.6
+   },
+   {
+    "date": "2026-09-25",
+    "spm": 164,
+    "spm_trend": 163.6
+   },
+   {
+    "date": "2026-10-05",
+    "spm": 164,
+    "spm_trend": 163
+   },
+   {
+    "date": "2026-10-07",
+    "spm": 163,
+    "spm_trend": 163
+   },
+   {
+    "date": "2026-10-11",
+    "spm": 164,
+    "spm_trend": 163.2
+   },
+   {
+    "date": "2026-10-19",
+    "spm": 163,
+    "spm_trend": 163.6
+   },
+   {
+    "date": "2026-10-22",
+    "spm": 164,
+    "spm_trend": 163.6
+   },
+   {
+    "date": "2026-10-25",
+    "spm": 147,
+    "spm_trend": 160.2
+   },
+   {
+    "date": "2026-10-28",
+    "spm": 163,
+    "spm_trend": 160.2
+   },
+   {
+    "date": "2026-11-03",
+    "spm": 156,
+    "spm_trend": 158.6
+   },
+   {
+    "date": "2026-11-05",
+    "spm": 167,
+    "spm_trend": 159.4
+   },
+   {
+    "date": "2026-11-10",
+    "spm": 170,
+    "spm_trend": 160.6
+   }
+  ]
+ },
  "recent": [
   {
    "date": "2026-11-10",

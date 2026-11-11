@@ -81,7 +81,8 @@ details.history summary { cursor: pointer; color: var(--accent); font-weight: 60
 details.history article { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; }
 
 /* Stat tiles */
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+@media (max-width: 400px) { .tile .v { font-size: 1.9rem; } .tile { padding: 14px; } }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 4px; border-top: 4px solid var(--line); }
 .tile.good { border-top-color: var(--good); } .tile.warn { border-top-color: var(--warn); } .tile.bad { border-top-color: var(--bad); }
 .tile .v { font-family: var(--display); font-size: 2.2rem; font-weight: 700; line-height: 1; }
@@ -110,6 +111,30 @@ details.history article { border-top: 1px solid var(--line); padding-top: 10px; 
 .chart { position: relative; height: 240px; }
 .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .82rem; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.section-h { font-size: 1.5rem; margin: 8px 0 -6px; }
+details.dive, details.explain { min-width: 0; }
+details.dive { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+details.dive > summary { list-style: none; cursor: pointer; padding: 16px 20px; display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 1.35rem; font-weight: 700; }
+details.dive > summary::-webkit-details-marker { display: none; }
+details.dive > summary::after { content: ""; margin-left: auto; width: 9px; height: 9px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .15s; flex: none; }
+details.dive[open] > summary::after { transform: rotate(-135deg); }
+details.dive > summary .dot { width: 12px; height: 12px; }
+@media (max-width: 560px) {
+  details.dive > summary { flex-wrap: wrap; row-gap: 2px; }
+  .dive-sub { order: 3; flex-basis: 100%; white-space: normal; margin-left: 22px; }
+}
+.dive-sub { font-family: var(--body); font-size: .9rem; font-weight: 500; color: var(--muted); margin-left: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+details.dive > .grid2, details.dive > .panel { padding: 0 16px 16px; }
+details.dive > .panel { margin: 0 16px 16px; padding: 16px; }
+details.dive .panel { background: var(--bg); border-color: transparent; }
+details.explain summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+details.explain dl { margin: 12px 0 0; display: grid; gap: 10px; max-width: 80ch; }
+details.explain dt { font-weight: 600; }
+details.explain dd { margin: 2px 0 0; color: var(--muted); }
+.ftp-big { font-family: var(--display); font-size: 3rem; font-weight: 700; line-height: 1; margin: 6px 0; }
+.dash { width: 14px; height: 0; border-top: 2px dashed; display: inline-block; flex: none; }
+.empty { display: grid; place-items: center; height: 100%; text-align: center; color: var(--muted); font-size: .92rem; padding: 0 12px; }
+.tile .d b { color: var(--ink); font-weight: 600; }
 .note { font-size: .86rem; color: var(--muted); margin-top: 10px; max-width: 70ch; }
 
 /* Tables */
@@ -156,45 +181,147 @@ footer { font-size: .82rem; color: var(--muted); text-align: center; }
     <details class="history" id="coach-history" hidden><summary>Earlier weeks</summary><div id="coach-history-list"></div></details>
   </section>
 
-  <section>
-    <div class="panel-head" style="margin-bottom:10px"><h2>Recovery</h2><span class="muted">last 7 days vs previous 4 weeks</span></div>
-    <div class="tiles" id="tiles"></div>
-  </section>
-
   <section class="panel">
     <div class="panel-head"><h2 id="week-title">This week</h2><span class="muted" id="week-status"></span></div>
     <div class="week" id="week"></div>
   </section>
 
+  <section>
+    <div class="panel-head" style="margin-bottom:10px"><h2>Recovery today</h2><span class="muted">last 7 days vs previous 4 weeks</span></div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section>
+    <div class="panel-head" style="margin-bottom:10px"><h2>Progress</h2><span class="muted" id="progress-sub">is the training working?</span></div>
+    <div class="tiles" id="progress-tiles"></div>
+  </section>
+
   <div class="grid2">
-    <section class="panel">
-      <div class="panel-head"><h3>Weekly training hours</h3>
-        <div class="legend"><span><i class="dot run"></i>Run</span><span><i class="dot bike"></i>Bike</span><span><i class="dot swim"></i>Swim</span><span><i class="dot strength"></i>Strength</span></div></div>
-      <div class="chart"><canvas id="c-hours" aria-label="Weekly training hours by sport"></canvas></div>
-    </section>
-    <section class="panel">
-      <div class="panel-head"><h3>Training load</h3>
-        <div class="legend"><span><i class="dot" style="background:var(--accent)"></i>Acute (7-day)</span><span><i class="dot" style="background:var(--muted)"></i>Chronic (28-day)</span></div></div>
-      <div class="chart"><canvas id="c-load" aria-label="Acute and chronic training load"></canvas></div>
-      <p class="note">Garmin's load. Acute above chronic means building; well below means fitness is flattening.</p>
-    </section>
-    <section class="panel">
-      <div class="panel-head"><h3>Sleep</h3><div class="legend"><span>Bars: hours · line: 7 h target</span></div></div>
-      <div class="chart"><canvas id="c-sleep" aria-label="Nightly sleep hours"></canvas></div>
-    </section>
-    <section class="panel">
-      <div class="panel-head"><h3>Overnight HRV and resting HR</h3>
-        <div class="legend"><span><i class="dot" style="background:var(--accent)"></i>HRV (ms)</span><span><i class="dot" style="background:var(--run)"></i>Resting HR (bpm)</span></div></div>
-      <div class="chart"><canvas id="c-hrv" aria-label="Overnight HRV and resting heart rate"></canvas></div>
-      <p class="note">Lines are 7-day averages; dots are single nights; dashed line is your HRV baseline. HRV falling while resting HR rises means back off.</p>
-    </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Fitness and fatigue</h3><div class="legend"><span><i class="dot" style="background:var(--accent)"></i>Fitness</span><span><i class="dash" style="border-color:var(--run)"></i>Fatigue</span></div></div>
+        <div class="chart" id="c-pmc-wrap"><canvas id="c-pmc" aria-label="Fitness and fatigue"></canvas></div>
+        <p class="note" id="c-pmc-note">Fitness should climb steadily through the build and dip only in recovery weeks.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Form</h3><div class="legend"><span>Fitness minus fatigue</span></div></div>
+        <div class="chart" id="c-form-wrap"><canvas id="c-form" aria-label="Form: fitness minus fatigue"></canvas></div>
+        <p class="note" id="c-form-note">Below zero while building; above zero on race day.</p>
+      </section>
   </div>
 
-  <section class="panel">
-    <div class="panel-head"><h3>Easy-run efficiency</h3><span class="muted">metres per minute per heartbeat, easy runs over 20 min</span></div>
-    <div class="chart"><canvas id="c-ef" aria-label="Easy run efficiency over time"></canvas></div>
-    <p class="note">The aerobic base at work: as fitness builds, the same heart rate buys more speed and this line rises. Heat, poor sleep and tired legs pull single points down.</p>
-  </section>
+  <details class="explain panel">
+    <summary>What do fitness, fatigue, form and the other numbers mean?</summary>
+    <dl>
+      <dt>Fitness</dt><dd>How much training you've absorbed: your average daily training load over the last six weeks. It's the same idea as Strava's Fitness &amp; Freshness chart (and TrainingPeaks' CTL), but built from Garmin's load, so the numbers won't match Strava's. Higher means you can handle more work. It rises slowly and falls slowly.</dd>
+      <dt>Fatigue</dt><dd>The same average over the last week only. It jumps after a big session or week and drops quickly with rest. It's roughly how tired you feel.</dd>
+      <dt>Form</dt><dd>Fitness minus fatigue, i.e. how fresh you are (Strava calls it Form or Freshness). Negative is normal while building: you're carrying some tiredness. Very negative for weeks means the load is outrunning your recovery. The taper is designed to make it positive on race day.</dd>
+      <dt>Aerobic pace at 140 bpm</dt><dd>What pace your steady runs would be if your heart rate sat at exactly 140. If the same heart rate buys a faster pace over months, your aerobic engine is growing. It's the running version of watts per heartbeat.</dd>
+      <dt>Bike watts at 140 bpm</dt><dd>The same for the bike: the power you'd hold at 140 bpm on a steady ride. Needs power and heart rate in the same ride.</dd>
+      <dt>VO2 max</dt><dd>Garmin's estimate of your maximum aerobic capacity, from pace against heart rate on every run. A change of 1 is real.</dd>
+      <dt>Ramp</dt><dd>How much the week's training load changed from the week before. More than about 10% a week, week after week, raises injury and illness risk.</dd>
+    </dl>
+  </details>
+
+  <h2 class="section-h">Deep dives</h2>
+
+  <details class="dive" data-key="run">
+    <summary><span class="dot run"></span>Run<span class="dive-sub" id="dive-run-sub"></span></summary>
+    <div class="grid2">
+      <section class="panel">
+        <div class="panel-head"><h3>Weekly running</h3><div class="legend"><span><i class="dot run"></i>km</span></div></div>
+        <div class="chart" id="c-runweek-wrap"><canvas id="c-runweek" aria-label="Weekly running distance"></canvas></div>
+        <p class="note" id="c-runweek-note">Run distance per week. The current week is the lightest bar until it's done.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Long run vs plan</h3><div class="legend"><span><i class="dot run"></i>Longest run</span><span><i class="dash" style="border-color:var(--ink)"></i>Target</span></div></div>
+        <div class="chart" id="c-longrun-wrap"><canvas id="c-longrun" aria-label="Longest run each week against the target"></canvas></div>
+        <p class="note" id="c-longrun-note">The week's longest run against the plan's long-run target, building to 100 min in January.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Aerobic pace at <span class="ref-hr">140</span> bpm</h3><div class="legend"><span>Dots: steady runs · line: 5-run average</span></div></div>
+        <div class="chart" id="c-runpace-wrap"><canvas id="c-runpace" aria-label="Running pace scaled to 140 bpm"></canvas></div>
+        <p class="note" id="c-runpace-note">Faster at the same heart rate means a bigger engine. Hills, heat and tired legs move single runs: watch the line.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>VO2 max</h3><div class="legend"><span>Garmin estimate after each run</span></div></div>
+        <div class="chart" id="c-vo2-wrap"><canvas id="c-vo2" aria-label="Garmin VO2 max estimate over time"></canvas></div>
+        <p class="note" id="c-vo2-note">Slow to move, so a change of 1 is real.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Run cadence</h3><div class="legend"><span>Dots: runs · line: 5-run average · dashed: 170</span></div></div>
+        <div class="chart" id="c-cadence-wrap"><canvas id="c-cadence" aria-label="Run cadence per run"></canvas></div>
+        <p class="note" id="c-cadence-note">Higher cadence (shorter, quicker steps) usually means less load on the knees and better economy, which matters off the bike. Track sessions read higher than easy runs.</p>
+      </section>
+    </div>
+  </details>
+
+  <details class="dive" data-key="bike">
+    <summary><span class="dot bike"></span>Bike<span class="dive-sub" id="dive-bike-sub"></span></summary>
+    <div class="grid2">
+      <section class="panel">
+        <div class="panel-head"><h3>Weekly riding</h3><div class="legend"><span><i class="dot bike"></i>hours</span></div></div>
+        <div class="chart" id="c-bikeweek-wrap"><canvas id="c-bikeweek" aria-label="Weekly riding hours"></canvas></div>
+        <p class="note" id="c-bikeweek-note">Ride time per week, indoor and outdoor.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Long ride vs plan</h3><div class="legend"><span><i class="dot bike"></i>Longest ride</span><span><i class="dash" style="border-color:var(--ink)"></i>Target</span></div></div>
+        <div class="chart" id="c-longride-wrap"><canvas id="c-longride" aria-label="Longest ride each week against the target"></canvas></div>
+        <p class="note" id="c-longride-note">The week's longest ride against the plan, building to 4.5 hours in January. This is the session that decides the race.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Watts at <span class="ref-hr">140</span> bpm</h3><div class="legend"><span>Dots: steady rides · line: 5-ride average</span></div></div>
+        <div class="chart" id="c-bike-wrap"><canvas id="c-bike" aria-label="Bike power scaled to 140 bpm"></canvas></div>
+        <p class="note" id="c-bike-note">More watts at the same heart rate means the bike engine is growing. Steady rides only, with power and heart rate in the same file.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>FTP</h3></div>
+        <div class="ftp-big" id="ftp-big">–</div>
+        <p class="note" id="ftp-note2"></p>
+      </section>
+    </div>
+  </details>
+
+  <details class="dive" data-key="swim">
+    <summary><span class="dot swim"></span>Swim<span class="dive-sub" id="dive-swim-sub"></span></summary>
+    <div class="panel"><p class="note" id="swim-text" style="margin:0"></p></div>
+  </details>
+
+  <details class="dive" data-key="load">
+    <summary><span class="dot" style="background:var(--accent)"></span>Load<span class="dive-sub" id="dive-load-sub"></span></summary>
+    <div class="grid2">
+      <section class="panel">
+        <div class="panel-head"><h3>Weekly training hours</h3><div class="legend"><span><i class="dot run"></i>Run</span><span><i class="dot bike"></i>Bike</span><span><i class="dot swim"></i>Swim</span><span><i class="dot strength"></i>Strength</span></div></div>
+        <div class="chart" id="c-hours-wrap"><canvas id="c-hours" aria-label="Weekly training hours by sport"></canvas></div>
+        <p class="note" id="c-hours-note">Plan: 8 to 10 hours a week including gym by December.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Weekly load and ramp</h3><div class="legend"><span>Bars: Garmin load · labels: change vs last week</span></div></div>
+        <div class="chart" id="c-load-wrap"><canvas id="c-load" aria-label="Weekly training load"></canvas></div>
+        <p class="note" id="c-load-note">Big jumps week to week are the injury risk; a steady staircase with a lighter week every three or four is the goal.</p>
+      </section>
+    </div>
+  </details>
+
+  <details class="dive" data-key="recovery">
+    <summary><span class="dot" style="background:var(--good)"></span>Recovery<span class="dive-sub" id="dive-rec-sub"></span></summary>
+    <div class="grid2">
+      <section class="panel">
+        <div class="panel-head"><h3>Sleep</h3><div class="legend"><span>Bars: hours · dashed: 7 h target</span></div></div>
+        <div class="chart" id="c-sleep-wrap"><canvas id="c-sleep" aria-label="Nightly sleep hours"></canvas></div>
+        <p class="note" id="c-sleep-note">Hard sessions only on a reasonable night's sleep.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Overnight HRV</h3><div class="legend"><span><i class="dot" style="background:var(--accent)"></i>7-day average</span><span><i class="dash" style="border-color:var(--muted)"></i>Your baseline</span></div></div>
+        <div class="chart" id="c-hrv-wrap"><canvas id="c-hrv" aria-label="Overnight HRV"></canvas></div>
+        <p class="note" id="c-hrv-note">Dots are single nights. A 7-day average below your baseline for several days means ease off.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h3>Resting heart rate</h3><div class="legend"><span><i class="dot" style="background:var(--run)"></i>7-day average</span></div></div>
+        <div class="chart" id="c-rhr-wrap"><canvas id="c-rhr" aria-label="Resting heart rate"></canvas></div>
+        <p class="note" id="c-rhr-note">About 5 bpm above normal for two or more days: easy or rest. Falling over months is a fitness sign.</p>
+      </section>
+    </div>
+  </details>
 
   <section class="panel">
     <div class="panel-head"><h2>The plan</h2><span class="muted">16 weeks to race day</span></div>
@@ -282,6 +409,47 @@ function tiles(d) {
   $("tiles").innerHTML = items.map((t) => `<div class="tile ${t.s}"><span class="label">${t.k}</span><span class="v">${t.v ?? "–"}<small>${t.u}</small></span><span class="d">${t.d}</span></div>`).join("");
 }
 
+function progress(d) {
+  const p = d.progress; if (!p) return;
+  const h = p.headline, wk = h.weeks_back;
+  document.querySelectorAll(".ref-hr").forEach((e) => e.textContent = p.ref_hr);
+  $("progress-sub").textContent = `now vs ${wk} weeks ago`;
+  const signed = (v, dp = 0) => (v > 0 ? "+" : v < 0 ? "\u2212" : "\u00b1") + Math.abs(v).toFixed(dp);
+  const paceDiff = (s) => `${Math.floor(Math.abs(s) / 60) ? Math.floor(Math.abs(s) / 60) + ":" + String(Math.round(Math.abs(s) % 60)).padStart(2, "0") : Math.round(Math.abs(s)) + " s"}/km ${s < 0 ? "faster" : "slower"}`;
+  const f = h.fitness, rp = h.run_pace, bw = h.bike_watts, v = h.vo2max;
+  const items = [
+    {k: "Fitness", v: f.now != null ? Math.round(f.now) : null, u: "", s: f.change > 0 ? "good" : "",
+     d: f.change != null ? `<b>${signed(f.change)}</b> in ${wk} weeks · form ${h.form != null ? Math.round(h.form) : "\u2013"}` : "not enough data yet"},
+    {k: "VO2 max", v: v.now, u: "", s: v.now > v.first ? "good" : "",
+     d: v.first != null ? `<b>${signed(v.now - v.first)}</b> since ${fmtDate(v.first_date, {month: "short"})} (was ${v.first})` : "no estimate yet"},
+    {k: `Easy pace at ${p.ref_hr} bpm`, v: rp.now != null ? pace(Math.round(rp.now)).replace("/km", "") : null, u: "/km", s: rp.change < -3 ? "good" : "",
+     d: rp.change != null ? (Math.abs(rp.change) < 3 ? `<b>no clear change</b> in ${wk} weeks` : `<b>${paceDiff(rp.change)}</b> than ${wk} weeks ago`) : "needs 3+ steady runs"},
+    {k: `Bike watts at ${p.ref_hr} bpm`, v: bw.now != null ? Math.round(bw.now) : null, u: "W", s: bw.change > 3 ? "good" : "",
+     d: bw.change != null ? `<b>${signed(bw.change)} W</b> in ${wk} weeks` : `waiting for rides with power and heart rate · FTP ${d.zones.ftp_w ?? "\u2013"} W`},
+  ];
+  $("progress-tiles").innerHTML = items.map((t) => `<div class="tile ${t.s}"><span class="label">${t.k}</span><span class="v">${t.v ?? "\u2013"}<small>${t.v != null ? t.u : ""}</small></span><span class="d">${t.d}</span></div>`).join("");
+}
+
+function dives(d) {
+  const p = d.progress; if (!p) return;
+  const W = p.weekly, last = W.filter((w) => !w.current).at(-1) || {}, r = d.recovery;
+  const vs = (t) => t ? ` (target ${hm(t)})` : "";
+  $("dive-run-sub").textContent = `last week ${last.run_km ?? 0} km · long run ${hm(last.long_run_min || 0)}${vs(last.long_run_target)}`;
+  $("dive-bike-sub").textContent = `last week ${hm(last.bike_min || 0)} · long ride ${hm(last.long_ride_min || 0)}${vs(last.long_ride_target)}`;
+  const swimWeek = d.weeks_plan.find((w) => /swim starts/i.test(w.notes || ""));
+  const swimDone = W.some((w) => w.swim_km > 0);
+  $("dive-swim-sub").textContent = swimDone ? `last week ${last.swim_km ?? 0} km` : (swimWeek ? `starts ${fmtDate(swimWeek.start)}` : "");
+  $("swim-text").textContent = swimDone ? "Swim distance and pace per 100 m will show here." :
+    `Swimming starts in week ${swimWeek ? swimWeek.week : 9}${swimWeek ? ` (${fmtDate(swimWeek.start, {day: "numeric", month: "long"})})` : ""} with a CSS test, then one swim a week, two from January. Weekly distance and pace per 100 m will appear here once swims are recorded.`;
+  const hrs = ((last.run_min || 0) + (last.bike_min || 0)) / 60;
+  $("dive-load-sub").textContent = `last week run + bike ${hrs.toFixed(1)} h${last.ramp_pct != null ? ` · load ${last.ramp_pct > 0 ? "+" : ""}${last.ramp_pct}%` : ""}`;
+  $("dive-rec-sub").textContent = `HRV ${r.hrv_7d ?? "\u2013"} vs ${r.hrv_base ?? "\u2013"} ms · resting HR ${r.rhr_7d ?? "\u2013"} · sleep ${r.sleep_7d ?? "\u2013"} h`;
+  $("ftp-big").innerHTML = d.zones.ftp_w ? `${d.zones.ftp_w}<small style="font-size:1.1rem;color:var(--muted)"> W</small>` : "\u2013";
+  const next = d.weeks_plan.find((w) => /ftp retest/i.test(w.notes || "") && w.start > d.today);
+  const wkg = d.zones.ftp_w ? (d.zones.ftp_w / 74).toFixed(1) : null;
+  $("ftp-note2").textContent = `${d.zones.ftp_tested ? `Tested ${fmtDate(d.zones.ftp_tested, {day: "numeric", month: "long"})}` : ""}${wkg ? ` · about ${wkg} W/kg` : ""}${next ? ` · next test ${fmtDate(next.start)} (week ${next.week})` : ""}. Race power is 75\u201380% of FTP.`;
+}
+
 function week(d) {
   const tw = d.this_week;
   $("week-title").textContent = `Week ${tw.week ?? ""}: this week`;
@@ -326,36 +494,119 @@ function drawCharts(d) {
     options: base({scales: {x: {stacked: true, grid: {display: false}}, y: {stacked: true, grid: {color: grid}, title: {display: true, text: "hours"}}},
       plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => `${c.dataset.label}: ${c.raw.toFixed(1)} h`}}}})}));
 
-  charts.push(new Chart($("c-load"), {type: "line", data: {labels: days, datasets: [
-    {label: "Acute", data: d.daily.map((x) => x.acute), borderColor: acc, backgroundColor: acc, pointRadius: 0, borderWidth: 2.5, spanGaps: true, fill: false},
-    {label: "Chronic", data: d.daily.map((x) => x.chronic), borderColor: ink, pointRadius: 0, borderWidth: 2, borderDash: [5, 4], spanGaps: true}]},
-    options: base()}));
-
   charts.push(new Chart($("c-sleep"), {data: {labels: days, datasets: [
     {type: "bar", label: "Sleep", data: d.daily.map((x) => x.sleep_h), backgroundColor: d.daily.map((x) => x.sleep_h == null ? grid : x.sleep_h >= 7 ? acc : x.sleep_h >= 6 ? css("--warn") : css("--bad")), borderRadius: 2},
     {type: "line", label: "Target", data: d.daily.map(() => 7), borderColor: ink, borderDash: [4, 4], borderWidth: 1.5, pointRadius: 0}]},
     options: base({plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => c.dataset.label === "Target" ? "Target: 7 h" : `Sleep: ${c.raw ?? "–"} h`}}}})}));
 
   charts.push(new Chart($("c-hrv"), {data: {labels: days, datasets: [
-    {type: "line", label: "HRV nightly", data: d.daily.map((x) => x.hrv), borderWidth: 0, pointRadius: 2.5, pointBackgroundColor: css("--accent-soft"), pointBorderColor: acc, showLine: false, yAxisID: "y"},
-    {type: "line", label: "HRV", data: d.daily.map((x) => x.hrv_7d), borderColor: acc, pointRadius: 0, borderWidth: 2.5, spanGaps: true, tension: .3, yAxisID: "y"},
-    {type: "line", label: "HRV baseline", data: d.daily.map((x) => x.hrv_base), borderColor: acc, borderDash: [4, 4], borderWidth: 1.2, pointRadius: 0, yAxisID: "y"},
-    {type: "line", label: "Resting HR", data: d.daily.map((x) => x.rhr_7d), borderColor: css("--run"), pointRadius: 0, borderWidth: 2.5, spanGaps: true, tension: .3, yAxisID: "y1"}]},
-    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}},
-      y: {grid: {color: grid}, beginAtZero: false, title: {display: true, text: "HRV ms"}},
-      y1: {position: "right", grid: {display: false}, beginAtZero: false, title: {display: true, text: "bpm"}}},
-      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => `${c.dataset.label}${c.dataset.label === "HRV" || c.dataset.label === "Resting HR" ? " (7-day)" : ""}: ${c.raw}`}}}})}));
+    {type: "line", label: "Night", data: d.daily.map((x) => x.hrv), showLine: false, pointRadius: 3, pointBackgroundColor: css("--surface"), pointBorderColor: acc, pointBorderWidth: 1.5},
+    {type: "line", label: "7-day average", data: d.daily.map((x) => x.hrv_7d), borderColor: acc, pointRadius: 0, borderWidth: 2, spanGaps: true, tension: .3},
+    {type: "line", label: "Baseline", data: d.daily.map((x) => x.hrv_base), borderColor: ink, borderDash: [4, 4], borderWidth: 1.5, pointRadius: 0}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}}, y: {grid: {color: grid}, beginAtZero: false, title: {display: true, text: "ms"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => `${c.dataset.label}: ${c.raw} ms`}}}})}));
 
-  charts.push(new Chart($("c-ef"), {type: "line", data: {labels: d.efficiency.map((x) => fmtDate(x.date)), datasets: [
-    {label: "Efficiency", data: d.efficiency.map((x) => x.ef), borderColor: css("--run"), backgroundColor: css("--run"), pointRadius: 4, borderWidth: 2, tension: .25}]},
-    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, beginAtZero: false}},
-      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => { const p = d.efficiency[c.dataIndex]; return `${p.ef} · ${pace(p.pace_s_km)} at ${p.avg_hr} bpm`; }}}}})}));
+  charts.push(new Chart($("c-rhr"), {data: {labels: days, datasets: [
+    {type: "line", label: "Night", data: d.daily.map((x) => x.rhr), showLine: false, pointRadius: 3, pointBackgroundColor: css("--surface"), pointBorderColor: css("--run"), pointBorderWidth: 1.5},
+    {type: "line", label: "7-day average", data: d.daily.map((x) => x.rhr_7d), borderColor: css("--run"), pointRadius: 0, borderWidth: 2, spanGaps: true, tension: .3}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}}, y: {grid: {color: grid}, beginAtZero: false, title: {display: true, text: "bpm"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => `${c.dataset.label}: ${c.raw} bpm`}}}})}));
+
+  const p = d.progress;
+  if (!p) return;
+  const pdays = p.pmc.map((x) => fmtDate(x.date));
+  const last = p.pmc.length - 1;
+  const endLabel = (text, color) => ({id: "end-" + text, afterDatasetsDraw(ch) {
+    const ds = ch.data.datasets.findIndex((x) => x.label === text); if (ds < 0) return;
+    const pt = ch.getDatasetMeta(ds).data[last]; if (!pt) return;
+    const g = ch.ctx; g.save(); g.fillStyle = css("--ink"); g.font = `600 12px ${css("--body")}`; g.textAlign = "right";
+    g.fillText(`${text} ${Math.round(ch.data.datasets[ds].data[last])}`, pt.x - 6, pt.y - 8); g.restore(); }});
+  charts.push(new Chart($("c-pmc"), {type: "line", data: {labels: pdays, datasets: [
+    {label: "Fitness", data: p.pmc.map((x) => x.fitness), borderColor: acc, backgroundColor: acc, borderWidth: 2.5, pointRadius: 0, tension: .2},
+    {label: "Fatigue", data: p.pmc.map((x) => x.fatigue), borderColor: css("--run"), borderDash: [5, 4], borderWidth: 2, pointRadius: 0, tension: .2}]},
+    options: base({plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => `${c.dataset.label}: ${Math.round(c.raw)}`}}}}),
+    plugins: [endLabel("Fitness"), endLabel("Fatigue")]}));
+
+  charts.push(new Chart($("c-form"), {type: "bar", data: {labels: pdays, datasets: [
+    {label: "Form", data: p.pmc.map((x) => x.form), backgroundColor: p.pmc.map((x) => x.form >= 0 ? acc : css("--strength")), borderRadius: 2, barPercentage: 1, categoryPercentage: .9}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}}, y: {grid: {color: (c) => c.tick.value === 0 ? ink : grid}, beginAtZero: false}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => `Form: ${Math.round(c.raw)}`}}}})}));
+
+  const runs = p.run_pace;
+  charts.push(new Chart($("c-runpace"), {data: {labels: runs.map((x) => fmtDate(x.date)), datasets: [
+    {type: "line", label: "Run", data: runs.map((x) => x.pace_s_km), showLine: false, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: css("--surface"), pointBorderColor: css("--run"), pointBorderWidth: 2},
+    {type: "line", label: "5-run average", data: runs.map((x) => x.pace_s_km_trend), borderColor: css("--run"), borderWidth: 2, pointRadius: 0, spanGaps: true, tension: .3}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}},
+      y: {reverse: true, beginAtZero: false, grid: {color: grid}, ticks: {callback: (v) => pace(v).replace("/km", "")}, title: {display: true, text: "min/km (faster is up)"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => {
+        const r = runs[c.dataIndex];
+        return c.datasetIndex === 0 ? [`${pace(r.pace_s_km)} at ${p.ref_hr} bpm`, `ran ${pace(r.actual_pace_s_km)} at ${r.avg_hr} bpm, ${r.minutes} min`] : `5-run average: ${pace(Math.round(c.raw))}`; }}}}})}));
+
+  charts.push(new Chart($("c-vo2"), {type: "line", data: {labels: p.vo2max.map((x) => fmtDate(x.date)), datasets: [
+    {label: "VO2 max", data: p.vo2max.map((x) => x.vo2max), borderColor: acc, backgroundColor: acc, borderWidth: 2, pointRadius: 3, stepped: "before"}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}}, y: {grid: {color: grid}, beginAtZero: false, ticks: {precision: 0}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => `VO2 max: ${c.raw}`}}}})}));
+
+  const W = p.weekly, wl = W.map((w) => fmtDate(w.start));
+  const cur = (w, color) => w.current ? color + "80" : color;  // this week, still filling: lighter
+  const targetLine = (key) => ({type: "line", label: "Target", data: W.map((w) => w[key]), borderColor: css("--ink"), borderDash: [4, 3], borderWidth: 1.5, pointRadius: 3, pointBackgroundColor: css("--ink"), showLine: false, spanGaps: false});
+  const runC = css("--run"), bikeC = css("--bike");
+  charts.push(new Chart($("c-runweek"), {type: "bar", data: {labels: wl, datasets: [
+    {label: "Run", data: W.map((w) => w.run_km), backgroundColor: W.map((w) => cur(w, runC)), borderRadius: 4}]},
+    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, title: {display: true, text: "km"}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => { const w = W[c.dataIndex]; return [`${w.run_km} km in ${w.runs} run${w.runs === 1 ? "" : "s"}, ${hm(w.run_min)}`].concat(w.current ? ["this week so far"] : []); }}}}})}));
+  charts.push(new Chart($("c-longrun"), {data: {labels: wl, datasets: [
+    {type: "bar", label: "Longest run", data: W.map((w) => w.long_run_min || null), backgroundColor: W.map((w) => cur(w, runC)), borderRadius: 4},
+    {...targetLine("long_run_target"), pointStyle: "line", pointRadius: 12, pointBorderWidth: 2.5, pointBorderColor: css("--ink")}]},
+    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, title: {display: true, text: "min"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => `${c.dataset.label}: ${hm(c.raw)}`}}}})}));
+  charts.push(new Chart($("c-cadence"), {data: {labels: p.cadence.map((x) => fmtDate(x.date)), datasets: [
+    {type: "line", label: "Cadence", data: p.cadence.map((x) => x.spm), showLine: false, pointBackgroundColor: css("--surface"), pointBorderColor: runC, pointBorderWidth: 2, pointRadius: 4},
+    {type: "line", label: "5-run average", data: p.cadence.map((x) => x.spm_trend), borderColor: runC, borderWidth: 2, pointRadius: 0, spanGaps: true, tension: .3},
+    {type: "line", label: "170 spm", data: p.cadence.map(() => 170), borderColor: ink, borderDash: [4, 4], borderWidth: 1.2, pointRadius: 0}]},
+    options: base({scales: {x: {grid: {display: false}, ticks: {maxRotation: 0, autoSkipPadding: 12}}, y: {grid: {color: grid}, beginAtZero: false, title: {display: true, text: "spm"}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => c.datasetIndex === 2 ? "Reference: 170 spm" : c.datasetIndex === 1 ? `5-run average: ${Math.round(c.raw)}` : `${c.raw} steps/min`}}}})}));
+  charts.push(new Chart($("c-bikeweek"), {type: "bar", data: {labels: wl, datasets: [
+    {label: "Bike", data: W.map((w) => +(w.bike_min / 60).toFixed(2)), backgroundColor: W.map((w) => cur(w, bikeC)), borderRadius: 4}]},
+    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, title: {display: true, text: "hours"}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => { const w = W[c.dataIndex]; return [`${hm(w.bike_min)} in ${w.rides} ride${w.rides === 1 ? "" : "s"}`].concat(w.current ? ["this week so far"] : []); }}}}})}));
+  charts.push(new Chart($("c-longride"), {data: {labels: wl, datasets: [
+    {type: "bar", label: "Longest ride", data: W.map((w) => w.long_ride_min ? +(w.long_ride_min / 60).toFixed(2) : null), backgroundColor: W.map((w) => cur(w, bikeC)), borderRadius: 4},
+    {type: "line", label: "Target", data: W.map((w) => w.long_ride_target ? +(w.long_ride_target / 60).toFixed(2) : null), showLine: false, pointStyle: "line", pointRadius: 12, pointBorderWidth: 2.5, pointBorderColor: css("--ink")}]},
+    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, title: {display: true, text: "hours"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => `${c.dataset.label}: ${hm(Math.round(c.raw * 60))}`}}}})}));
+  const rampLabels = {id: "ramp", afterDatasetsDraw(ch) {
+    const g = ch.ctx, meta = ch.getDatasetMeta(0); g.save(); g.font = `600 11px ${css("--body")}`; g.textAlign = "center"; g.fillStyle = css("--muted");
+    meta.data.forEach((bar, i) => { const r = W[i].ramp_pct; if (r == null || W[i].current) return; g.fillText((r > 0 ? "+" : "") + r + "%", bar.x, bar.y - 6); }); g.restore(); }};
+  charts.push(new Chart($("c-load"), {type: "bar", data: {labels: wl, datasets: [
+    {label: "Load", data: W.map((w) => w.load), backgroundColor: W.map((w) => cur(w, acc)), borderRadius: 4}]},
+    options: base({layout: {padding: {top: 18}}, scales: {x: {grid: {display: false}}, y: {grid: {color: grid}}},
+      plugins: {legend: {display: false}, tooltip: {callbacks: {label: (c) => { const w = W[c.dataIndex]; return `Load ${w.load}${w.ramp_pct != null ? ` (${w.ramp_pct > 0 ? "+" : ""}${w.ramp_pct}% vs previous week)` : ""}${w.current ? ", so far" : ""}`; }}}}}), plugins: [rampLabels]}));
+
+  const rides = p.bike_watts;
+  if (rides.length < 3) {
+    $("c-bike-wrap").innerHTML = `<div class="empty">Not enough rides yet with power and heart rate in the same file${rides.length ? ` (${rides.length} so far)` : ""}. Zwift rides currently arrive without heart rate and outdoor rides without power. Once both are recorded together, this fills itself.</div>`;
+    $("c-bike-wrap").style.height = "auto"; $("c-bike-note").hidden = true;
+    return;
+  }
+  charts.push(new Chart($("c-bike"), {data: {labels: rides.map((x) => fmtDate(x.date)), datasets: [
+    {type: "line", label: "Ride", data: rides.map((x) => x.watts), showLine: false, pointRadius: 4, pointBackgroundColor: css("--surface"), pointBorderColor: css("--bike"), pointBorderWidth: 2},
+    {type: "line", label: "5-ride average", data: rides.map((x) => x.watts_trend), borderColor: css("--bike"), borderWidth: 2, pointRadius: 0, spanGaps: true, tension: .3}]},
+    options: base({scales: {x: {grid: {display: false}}, y: {grid: {color: grid}, beginAtZero: false, title: {display: true, text: "W"}}},
+      plugins: {legend: {display: false}, tooltip: {filter: (i) => i.raw != null, callbacks: {label: (c) => {
+        const r = rides[c.dataIndex];
+        return c.datasetIndex === 0 ? [`${r.watts} W at ${p.ref_hr} bpm`, `rode ${r.avg_power} W at ${r.avg_hr} bpm, ${r.minutes} min`] : `5-ride average: ${Math.round(c.raw)} W`; }}}}})}));
 }
 
-function render(d) { header(d); coach(d); tiles(d); week(d); tables(d); drawCharts(d); }
+function render(d) { header(d); coach(d); progress(d); dives(d); tiles(d); week(d); tables(d); drawCharts(d); }
 
 fetch("data.json", {cache: "no-store"}).then((r) => r.json()).then((d) => { DATA = d; render(d); })
   .catch(() => { document.querySelector(".wrap").insertAdjacentHTML("afterbegin", '<p class="panel">The training data could not be loaded. Try refreshing.</p>'); });
+// Remember which deep dives are open (per browser; harmless if storage is blocked).
+document.querySelectorAll("details.dive").forEach((el) => {
+  try { if (localStorage.getItem("dive-" + el.dataset.key) === "1") el.open = true; } catch (e) {}
+  el.addEventListener("toggle", () => { try { localStorage.setItem("dive-" + el.dataset.key, el.open ? "1" : "0"); } catch (e) {} });
+});
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => DATA && render(DATA));
 </script>
 </body>
