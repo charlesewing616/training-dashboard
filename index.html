@@ -285,7 +285,7 @@ function tiles(d) {
 function week(d) {
   const tw = d.this_week;
   $("week-title").textContent = `Week ${tw.week ?? ""}: this week`;
-  $("week-status").textContent = tw.status === "confirmed" ? "Confirmed plan" : "Draft";
+  $("week-status").textContent = ({confirmed: "Confirmed plan", planned: "Coach\u2019s plan"})[tw.status] || "Draft";
   $("week").innerHTML = (tw.days || []).map((x) => {
     const done = x.done && x.done.length ? x.done.map((s) => `<span class="done"><i class="dot ${s.sport}"></i>${SPORT[s.sport]} ${hm(s.minutes)}${s.km ? ` · ${s.km} km` : ""}</span>`).join("")
       : (x.date < d.today && x.session !== "Off" ? `<span class="done muted">${/gym|zwift/i.test(x.session) ? "Not on Garmin" : "Not recorded"}</span>` : "");
