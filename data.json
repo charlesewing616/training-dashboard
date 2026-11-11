@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T07:59+00:00",
+ "generated": "2026-11-11T08:32+00:00",
  "today": "2026-11-11",
  "week_no": 4,
  "race": {
@@ -255,8 +255,8 @@
    {
     "day": "Wed",
     "date": "2026-11-11",
-    "session": "Bike sweet spot",
-    "target": "54 min: 12 min warm-up, 2 x 12 min at 205-215 W with 5 min at 130 W between, cool-down; 85-90 rpm. Readiness is low after Tuesday: first rep HR over 165 or legs dead, ride the rest easy at 130-150 W",
+    "session": "Bike sweet spot, 3 x 12",
+    "target": "68 min: 12 min warm-up, 3 x 12 min at 210-218 W with 4 min at 130 W between, cool-down; 85-90 rpm, stand 20 s every 5 min. First rep HR over 165 or legs dead: ride the rest easy at 130-150 W",
     "tier": "B",
     "workout": {
      "sport": "bike",
@@ -274,14 +274,14 @@
        ]
       },
       {
-       "repeat": 2,
+       "repeat": 3,
        "steps": [
         {
          "type": "interval",
          "min": 12,
          "power": [
-          205,
-          215
+          210,
+          218
          ],
          "cadence": [
           85,
@@ -291,7 +291,7 @@
         },
         {
          "type": "recovery",
-         "min": 5,
+         "min": 4,
          "power": [
           125,
           135
@@ -314,8 +314,8 @@
    {
     "day": "Thu",
     "date": "2026-11-12",
-    "session": "Club tempo (Shorter session) + easy run there and home",
-    "target": "70 min total: about 20 min easy there and 20 min home at 5:20-5:45/km, HR under 145; club Shorter session in between. Legs heavy from Tuesday: tempo at the slow end",
+    "session": "Long run, solo, with tempo",
+    "target": "70 min: 20 min easy at 5:20-5:45/km (HR under 145), 2 x 8 min tempo at 4:25-4:40/km (HR under 170) with 2 min easy jog, then 30 min easy. Legs heavy from Tue/Wed: one tempo rep only",
     "tier": "A",
     "workout": {
      "sport": "run",
@@ -332,16 +332,34 @@
         0,
         145
        ],
-       "note": "Easy to the club"
+       "note": "Easy"
       },
       {
-       "type": "other",
-       "min": 30,
-       "note": "Club Shorter session, as set"
+       "repeat": 2,
+       "steps": [
+        {
+         "type": "interval",
+         "min": 8,
+         "pace": [
+          "4:40",
+          "4:25"
+         ],
+         "note": "Tempo: controlled, HR under 170"
+        },
+        {
+         "type": "recovery",
+         "min": 2,
+         "pace": [
+          "6:00",
+          "5:30"
+         ],
+         "note": "Easy jog"
+        }
+       ]
       },
       {
        "type": "cooldown",
-       "min": 20,
+       "min": 30,
        "pace": [
         "5:45",
         "5:20"
