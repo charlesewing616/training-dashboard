@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T07:49+00:00",
+ "generated": "2026-11-11T07:59+00:00",
  "today": "2026-11-11",
  "week_no": 4,
  "race": {
@@ -226,37 +226,37 @@
   }
  ],
  "this_week": {
-  "week": 3,
-  "start": "2026-11-02",
-  "status": "confirmed",
+  "week": 4,
+  "start": "2026-11-09",
+  "status": "draft",
   "days": [
    {
     "day": "Mon",
-    "date": "2026-11-02",
-    "session": "Light gym + sauna",
-    "target": "30-40 min mobility and activation, no heavy lifting",
+    "date": "2026-11-09",
+    "session": "Gym: legs, back, injury prevention",
+    "target": "50-60 min: hips, knee control, foot/ankle, posterior chain",
     "tier": "C",
     "done": []
    },
    {
     "day": "Tue",
-    "date": "2026-11-03",
-    "session": "Run (instead of the bike session)",
-    "target": "Sweet spot ride not done; ran 7.1 km at 4:54/km, HR 161, last 2 km HR 176-181: the week's hard session",
+    "date": "2026-11-10",
+    "session": "Club track: 8 x 800 m (done)",
+    "target": "Done in the rain: reps about 3:27/km, HR 172 average, max 199. Harder than 'controlled' with Thursday's tempo to come",
     "tier": "B",
     "done": [
      {
       "sport": "run",
-      "minutes": 35,
-      "km": 7.1
+      "minutes": 21,
+      "km": 6.3
      }
     ]
    },
    {
     "day": "Wed",
-    "date": "2026-11-04",
-    "session": "Bike sweet spot, shortened (evening)",
-    "target": "50 min: 12 min warm-up, 2 x 10 min at 205-215 W with 5 min at 130 W between, cool-down; 85-90 rpm. Stand 20-30 s every 5 min. First rep HR over 165 or legs dead: ride the rest easy at 130-150 W",
+    "date": "2026-11-11",
+    "session": "Bike sweet spot",
+    "target": "54 min: 12 min warm-up, 2 x 12 min at 205-215 W with 5 min at 130 W between, cool-down; 85-90 rpm. Readiness is low after Tuesday: first rep HR over 165 or legs dead, ride the rest easy at 130-150 W",
     "tier": "B",
     "workout": {
      "sport": "bike",
@@ -278,7 +278,7 @@
        "steps": [
         {
          "type": "interval",
-         "min": 10,
+         "min": 12,
          "power": [
           205,
           215
@@ -287,7 +287,7 @@
           85,
           90
          ],
-         "note": "Stand 20 s at 5 min"
+         "note": "Stand 20 s every 5 min"
         },
         {
          "type": "recovery",
@@ -295,8 +295,7 @@
          "power": [
           125,
           135
-         ],
-         "note": "Stand up, move on the saddle"
+         ]
         }
        ]
       },
@@ -314,9 +313,9 @@
    },
    {
     "day": "Thu",
-    "date": "2026-11-05",
-    "session": "Long run, all easy",
-    "target": "45-50 min at 5:20-5:45/km, HR under 145, no tempo. Legs still sore: 30 min easy instead",
+    "date": "2026-11-12",
+    "session": "Club tempo (Shorter session) + easy run there and home",
+    "target": "70 min total: about 20 min easy there and 20 min home at 5:20-5:45/km, HR under 145; club Shorter session in between. Legs heavy from Tuesday: tempo at the slow end",
     "tier": "A",
     "workout": {
      "sport": "run",
@@ -324,20 +323,7 @@
      "steps": [
       {
        "type": "warmup",
-       "min": 10,
-       "pace": [
-        "5:50",
-        "5:30"
-       ],
-       "hr": [
-        0,
-        140
-       ],
-       "note": "Ease in"
-      },
-      {
-       "type": "other",
-       "min": 35,
+       "min": 20,
        "pace": [
         "5:45",
         "5:20"
@@ -346,57 +332,43 @@
         0,
         145
        ],
-       "note": "All easy. Legs sore? Stop at 30 min"
+       "note": "Easy to the club"
+      },
+      {
+       "type": "other",
+       "min": 30,
+       "note": "Club Shorter session, as set"
       },
       {
        "type": "cooldown",
-       "min": 5,
+       "min": 20,
        "pace": [
-        "6:00",
-        "5:30"
+        "5:45",
+        "5:20"
        ],
        "hr": [
         0,
-        140
-       ]
+        145
+       ],
+       "note": "Easy home"
       }
      ]
     },
-    "done": [
-     {
-      "sport": "run",
-      "minutes": 50,
-      "km": 8.5
-     }
-    ]
-   },
-   {
-    "day": "Fri",
-    "date": "2026-11-06",
-    "session": "Rest",
-    "target": "Off, or 15 min mobility (you did tonight's intervals instead of Friday's spin)",
-    "tier": "",
-    "done": [
-     {
-      "sport": "strength",
-      "minutes": 82,
-      "km": null
-     }
-    ]
-   },
-   {
-    "day": "Sat",
-    "date": "2026-11-07",
-    "session": "David Lloyd relax session",
-    "target": "Sauna, pool, mobility. No leg work: long ride tomorrow",
-    "tier": "",
     "done": []
    },
    {
-    "day": "Sun",
-    "date": "2026-11-08",
+    "day": "Fri",
+    "date": "2026-11-13",
+    "session": "Gym: upper, back, shoulder prep",
+    "target": "45 min, scapular work included. No HIIT on top: long ride tomorrow",
+    "tier": "C",
+    "done": []
+   },
+   {
+    "day": "Sat",
+    "date": "2026-11-14",
     "session": "Long ride, Zone 2",
-    "target": "2 hrs at 145-165 W (cap 174 W); 1.5 hrs floor; 60 g carbs/h",
+    "target": "2.5 hrs at 145-165 W (cap 174 W), HR under about 145; 2 hrs is the floor; 60 g carbs per hour",
     "tier": "A",
     "workout": {
      "sport": "bike",
@@ -417,7 +389,7 @@
       },
       {
        "type": "other",
-       "min": 100,
+       "min": 130,
        "power": [
         145,
         165
@@ -442,13 +414,15 @@
       }
      ]
     },
-    "done": [
-     {
-      "sport": "bike",
-      "minutes": 102,
-      "km": null
-     }
-    ]
+    "done": []
+   },
+   {
+    "day": "Sun",
+    "date": "2026-11-15",
+    "session": "Off",
+    "target": "Recovery",
+    "tier": "",
+    "done": []
    }
   ]
  },
@@ -490,25 +464,44 @@
   }
  ],
  "coach": {
-  "week": 2,
-  "week_start": "2026-10-26",
-  "written": "2026-11-01",
-  "verdict": "Bike quality done, but both key sessions came up short of plan.",
+  "week": 3,
+  "week_start": "2026-11-02",
+  "written": "2026-11-08",
+  "verdict": "Recovery week: both A sessions done, but Tuesday's run turned into the week's hard session.",
   "points": [
-   "Long run: 9.0 km in 46 min at 5:02/km, HR 143, vs 60 min with 2 x 10 min tempo. No tempo blocks; the whole run sat at a steady 4:46-5:12/km instead.",
-   "Thursday bike: 31 min at 198 W with steps to 265 W (114% FTP) and HR to 180, vs 3 x 10 min at 205-215 W. Shorter and harder than written.",
-   "Long ride moved to Sunday: 53 km, 2:07 moving, HR 143 vs 2-2.5 hrs. Power meter didn't record, so no watts.",
-   "Volume about 4.1 h (bike 3.4 h, run 0.75 h), up from about 2.8 h in week 1.",
-   "Recovery markers good: HRV 7-day 93 vs baseline 88, resting HR 46.7 vs 46.6, sleep 6.9 h average with one very short night."
+   "Long run (Thu): 8.5 km in 50 min at 5:53/km, HR 137, max 150. Easy, as written.",
+   "Long ride (Sun, Zwift): about 1:50 by the watch at HR 143 vs 2 hrs at 145-165 W. Zwift logged only 52 min moving (149 W average), so power is partial.",
+   "Tuesday run in place of the bike: 7.1 km at 4:54/km, HR 160, last 2 km at HR 176-181. Wednesday sweet spot done, shortened (43 min moving).",
+   "Friday 82 min HIIT and Saturday tennis on top: extra load in a recovery week.",
+   "Recovery fine overall (HRV 7-day 93 vs baseline 89, resting HR 45 vs 47), but Saturday night was 5.8 h sleep and HRV 26 (readiness 1), which shows in Sunday's HR 143 at about 150 W."
   ],
-  "focus": "Ride and run the sessions as written: sweet spot at 205-215 W, easy at 5:20-5:45/km.",
+  "focus": "Week 4 builds again: Thursday 70 min with the Shorter session, Saturday 2.5 hrs Zone 2. Tuesday track controlled, not a race.",
   "flags": [
-   "Long run short, no tempo",
-   "Long ride short",
-   "Power meter not recording"
+   "Tuesday run went hard",
+   "Friday HIIT in a recovery week",
+   "Short sleep Saturday night"
   ]
  },
  "coach_history": [
+  {
+   "week": 2,
+   "week_start": "2026-10-26",
+   "written": "2026-11-01",
+   "verdict": "Bike quality done, but both key sessions came up short of plan.",
+   "points": [
+    "Long run: 9.0 km in 46 min at 5:02/km, HR 143, vs 60 min with 2 x 10 min tempo. No tempo blocks; the whole run sat at a steady 4:46-5:12/km instead.",
+    "Thursday bike: 31 min at 198 W with steps to 265 W (114% FTP) and HR to 180, vs 3 x 10 min at 205-215 W. Shorter and harder than written.",
+    "Long ride moved to Sunday: 53 km, 2:07 moving, HR 143 vs 2-2.5 hrs. Power meter didn't record, so no watts.",
+    "Volume about 4.1 h (bike 3.4 h, run 0.75 h), up from about 2.8 h in week 1.",
+    "Recovery markers good: HRV 7-day 93 vs baseline 88, resting HR 46.7 vs 46.6, sleep 6.9 h average with one very short night."
+   ],
+   "focus": "Ride and run the sessions as written: sweet spot at 205-215 W, easy at 5:20-5:45/km.",
+   "flags": [
+    "Long run short, no tempo",
+    "Long ride short",
+    "Power meter not recording"
+   ]
+  },
   {
    "week": 1,
    "week_start": "2026-10-19",
