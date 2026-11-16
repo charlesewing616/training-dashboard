@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T07:50+00:00",
+ "generated": "2026-11-16T07:53+00:00",
  "today": "2026-11-16",
  "week_no": 5,
  "race": {
@@ -226,44 +226,78 @@
   }
  ],
  "this_week": {
-  "week": 4,
-  "start": "2026-11-09",
-  "status": "draft",
+  "week": 5,
+  "start": "2026-11-16",
+  "status": "planned",
   "days": [
    {
     "day": "Mon",
-    "date": "2026-11-09",
+    "date": "2026-11-16",
     "session": "Gym: legs, back, injury prevention",
-    "target": "50-60 min: hips, knee control, foot/ankle, posterior chain",
+    "target": "50-60 min: hip external rotation (extra on the left), split squats with knee tracking, foot/ankle, posterior chain",
     "tier": "C",
     "done": []
    },
    {
     "day": "Tue",
-    "date": "2026-11-10",
-    "session": "Club track: 8 x 800 m (done)",
-    "target": "Done in the rain: reps about 3:27/km, HR 172 average, max 199. Harder than 'controlled' with Thursday's tempo to come",
+    "date": "2026-11-17",
+    "session": "Club track: Standard session, controlled",
+    "target": "55 min: 15 min easy (HR under 145), reps at 3:45-3:55/km, never faster than 3:40/km, HR under 175 by the last rep (over 180: skip it), 10 min easy. Watch fallback: 6 x 800 m with 90 s jog",
     "tier": "B",
-    "done": [
-     {
-      "sport": "run",
-      "minutes": 21,
-      "km": 6.3
-     }
-    ]
+    "workout": {
+     "sport": "run",
+     "steps": [
+      {
+       "type": "warmup",
+       "min": 15,
+       "pace": [
+        "5:45",
+        "5:20"
+       ],
+       "hr": [
+        0,
+        145
+       ],
+       "note": "Easy"
+      },
+      {
+       "type": "other",
+       "min": 30,
+       "pace": [
+        "3:55",
+        "3:45"
+       ],
+       "note": "Club Standard session, controlled: never faster than 3:40/km, HR under 175 by the last rep. No club session: 6 x 800 m, 90 s jog"
+      },
+      {
+       "type": "cooldown",
+       "min": 10,
+       "pace": [
+        "5:45",
+        "5:20"
+       ],
+       "hr": [
+        0,
+        145
+       ],
+       "note": "Easy"
+      }
+     ]
+    },
+    "done": []
    },
    {
     "day": "Wed",
-    "date": "2026-11-11",
-    "session": "Bike sweet spot, 3 x 12",
-    "target": "68 min: 12 min warm-up, 3 x 12 min at 210-218 W with 4 min at 130 W between, cool-down; 85-90 rpm, stand 20 s every 5 min. First rep HR over 165 or legs dead: ride the rest easy at 130-150 W",
+    "date": "2026-11-18",
+    "session": "Bike sweet spot, 3 x 15",
+    "target": "73 min: 10 min warm-up, 3 x 15 min at 210-218 W with 5 min at 125-135 W between, 8 min cool-down; 85-90 rpm, stand 20 s every 5 min. Broadcast HR to Zwift. HR over 165 in the first rep: ride the rest at 150-165 W",
     "tier": "B",
     "workout": {
      "sport": "bike",
      "steps": [
       {
        "type": "warmup",
-       "min": 12,
+       "min": 10,
        "power": [
         120,
         170
@@ -274,11 +308,11 @@
        ]
       },
       {
-       "repeat": 3,
+       "repeat": 2,
        "steps": [
         {
          "type": "interval",
-         "min": 12,
+         "min": 15,
          "power": [
           210,
           218
@@ -291,13 +325,26 @@
         },
         {
          "type": "recovery",
-         "min": 4,
+         "min": 5,
          "power": [
           125,
           135
          ]
         }
        ]
+      },
+      {
+       "type": "interval",
+       "min": 15,
+       "power": [
+        210,
+        218
+       ],
+       "cadence": [
+        85,
+        90
+       ],
+       "note": "Stand 20 s every 5 min"
       },
       {
        "type": "cooldown",
@@ -309,19 +356,13 @@
       }
      ]
     },
-    "done": [
-     {
-      "sport": "bike",
-      "minutes": 60,
-      "km": null
-     }
-    ]
+    "done": []
    },
    {
     "day": "Thu",
-    "date": "2026-11-12",
-    "session": "Long run, solo, with tempo",
-    "target": "70 min: 20 min easy at 5:20-5:45/km (HR under 145), 2 x 8 min tempo at 4:25-4:40/km (HR under 170) with 2 min easy jog, then 30 min easy. Legs heavy from Tue/Wed: one tempo rep only",
+    "date": "2026-11-19",
+    "session": "Long run with tempo, 75 min",
+    "target": "Club: Standard session plus easy there and home to 75 min (about 25 min before), easy at 5:20-5:45/km, HR under 145. Solo (on the watch): 20 min easy, 2 x 10 min at 4:25-4:40/km (HR under 170) with 2 min jog, 31 min easy. Heavy legs: one rep",
     "tier": "A",
     "workout": {
      "sport": "run",
@@ -345,7 +386,7 @@
        "steps": [
         {
          "type": "interval",
-         "min": 8,
+         "min": 10,
          "pace": [
           "4:40",
           "4:25"
@@ -365,7 +406,7 @@
       },
       {
        "type": "cooldown",
-       "min": 30,
+       "min": 31,
        "pace": [
         "5:45",
         "5:20"
@@ -382,23 +423,17 @@
    },
    {
     "day": "Fri",
-    "date": "2026-11-13",
+    "date": "2026-11-20",
     "session": "Gym: upper, back, shoulder prep",
-    "target": "45 min, scapular work included. No HIIT on top: long ride tomorrow",
+    "target": "45 min, scapular work included. No HIIT; early night before the ride",
     "tier": "C",
-    "done": [
-     {
-      "sport": "run",
-      "minutes": 68,
-      "km": 12.2
-     }
-    ]
+    "done": []
    },
    {
     "day": "Sat",
-    "date": "2026-11-14",
-    "session": "Long ride, Zone 2",
-    "target": "2.5 hrs at 145-165 W (cap 174 W), HR under about 145; 2 hrs is the floor; 60 g carbs per hour",
+    "date": "2026-11-21",
+    "session": "Long ride, Zone 2, + first brick",
+    "target": "2.5 hrs at 145-165 W (cap 174 W), HR under about 145, 60 g carbs per hour; then straight into 10 min easy run at 5:20-5:45/km, HR under 150. 2 hrs is the floor. Late Friday: do it Sunday and swim Monday after gym",
     "tier": "A",
     "workout": {
      "sport": "bike",
@@ -428,7 +463,7 @@
         0,
         145
        ],
-       "note": "Zone 2: 145-165 W, cap 174 W. 60 g carbs per hour"
+       "note": "Zone 2: 145-165 W, cap 174 W. 60 g carbs per hour. Then 10 min easy run, HR under 150"
       },
       {
        "type": "cooldown",
@@ -448,17 +483,11 @@
    },
    {
     "day": "Sun",
-    "date": "2026-11-15",
-    "session": "Easy swim (optional)",
-    "target": "About 1,300 m, 35-40 min, all easy (RPE 4-5/10): 200 m easy, 4 x 50 m drill (catch-up) with 15 s rest, 6 x 100 m steady freestyle with 20 s rest, 4 x 50 m kick with 15 s rest, 100 m easy. No pull buoy or paddles yet. Any shoulder pain (not just tiredness): stop",
+    "date": "2026-11-22",
+    "session": "Easy swim (first of the block)",
+    "target": "About 1,300 m, 35-40 min, all easy (RPE 4-5/10): 200 m easy, 4 x 50 m catch-up drill (15 s rest), 6 x 100 m steady (20 s rest), 4 x 50 m kick (15 s rest), 100 m easy. No pull buoy or paddles. Shoulder pain (not just tiredness): stop",
     "tier": "C",
-    "done": [
-     {
-      "sport": "bike",
-      "minutes": 44,
-      "km": null
-     }
-    ]
+    "done": []
    }
   ]
  },
@@ -500,25 +529,44 @@
   }
  ],
  "coach": {
-  "week": 3,
-  "week_start": "2026-11-02",
-  "written": "2026-11-08",
-  "verdict": "Recovery week: both A sessions done, but Tuesday's run turned into the week's hard session.",
+  "week": 4,
+  "week_start": "2026-11-09",
+  "written": "2026-11-15",
+  "verdict": "Three of four key sessions done, but the long ride was missed and track went hard again.",
   "points": [
-   "Long run (Thu): 8.5 km in 50 min at 5:53/km, HR 137, max 150. Easy, as written.",
-   "Long ride (Sun, Zwift): about 1:50 by the watch at HR 143 vs 2 hrs at 145-165 W. Zwift logged only 52 min moving (149 W average), so power is partial.",
-   "Tuesday run in place of the bike: 7.1 km at 4:54/km, HR 160, last 2 km at HR 176-181. Wednesday sweet spot done, shortened (43 min moving).",
-   "Friday 82 min HIIT and Saturday tennis on top: extra load in a recovery week.",
-   "Recovery fine overall (HRV 7-day 93 vs baseline 89, resting HR 45 vs 47), but Saturday night was 5.8 h sleep and HRV 26 (readiness 1), which shows in Sunday's HR 143 at about 150 W."
+   "Tuesday track: 8 x 800 m in the rain at about 3:27/km, HR 172 average, max 199. That's well past 'controlled' (3:45-3:55/km).",
+   "Sweet spot 3 x 12 min held at exactly 214 W each rep, inside 210-218 W. Textbook.",
+   "Long run moved to Friday morning: 12.2 km in 68 min at 5:33/km, HR 139, max 152. Easy legs truly easy, but no tempo blocks.",
+   "Saturday long ride missed after a 4.75 h night (HRV 38, readiness 1). Sunday evening was a 44 min Zwift session instead: 178 W average with efforts to 273-318 W, HR max 176. Not a substitute for Zone 2 volume.",
+   "About 3.2 h in total (run 1.5 h, bike 1.75 h); no gym or swim logged. Recovery fine over the week: sleep 7.2 h vs 6.8, HRV 92 vs 91, resting HR 46 vs 47."
   ],
-  "focus": "Week 4 builds again: Thursday 70 min with the Shorter session, Saturday 2.5 hrs Zone 2. Tuesday track controlled, not a race.",
+  "focus": "Get the 2.5 hr Zone 2 ride done this week; no ride has gone past about 2:10 yet. Track at 3:45-3:55/km, not faster.",
   "flags": [
-   "Tuesday run went hard",
-   "Friday HIIT in a recovery week",
-   "Short sleep Saturday night"
+   "Long ride missed",
+   "Track run too hard",
+   "Short night before Saturday"
   ]
  },
  "coach_history": [
+  {
+   "week": 3,
+   "week_start": "2026-11-02",
+   "written": "2026-11-08",
+   "verdict": "Recovery week: both A sessions done, but Tuesday's run turned into the week's hard session.",
+   "points": [
+    "Long run (Thu): 8.5 km in 50 min at 5:53/km, HR 137, max 150. Easy, as written.",
+    "Long ride (Sun, Zwift): about 1:50 by the watch at HR 143 vs 2 hrs at 145-165 W. Zwift logged only 52 min moving (149 W average), so power is partial.",
+    "Tuesday run in place of the bike: 7.1 km at 4:54/km, HR 160, last 2 km at HR 176-181. Wednesday sweet spot done, shortened (43 min moving).",
+    "Friday 82 min HIIT and Saturday tennis on top: extra load in a recovery week.",
+    "Recovery fine overall (HRV 7-day 93 vs baseline 89, resting HR 45 vs 47), but Saturday night was 5.8 h sleep and HRV 26 (readiness 1), which shows in Sunday's HR 143 at about 150 W."
+   ],
+   "focus": "Week 4 builds again: Thursday 70 min with the Shorter session, Saturday 2.5 hrs Zone 2. Tuesday track controlled, not a race.",
+   "flags": [
+    "Tuesday run went hard",
+    "Friday HIIT in a recovery week",
+    "Short sleep Saturday night"
+   ]
+  },
   {
    "week": 2,
    "week_start": "2026-10-26",
@@ -2856,7 +2904,7 @@
     "bike_min": 104,
     "rides": 2,
     "long_ride_min": 60,
-    "long_ride_target": 150,
+    "long_ride_target": 165,
     "swim_km": 0.0,
     "load": 804,
     "current": false,
@@ -2872,7 +2920,7 @@
     "bike_min": 0,
     "rides": 0,
     "long_ride_min": 0,
-    "long_ride_target": 180,
+    "long_ride_target": 150,
     "swim_km": 0.0,
     "load": 0,
     "current": true,
