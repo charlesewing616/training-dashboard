@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-26T07:49+00:00",
- "today": "2026-11-26",
+ "generated": "2026-11-27T07:48+00:00",
+ "today": "2026-11-27",
  "week_no": 6,
  "race": {
   "name": "Ironman 70.3 Oman",
@@ -727,22 +727,6 @@
  ],
  "daily": [
   {
-   "date": "2026-10-02",
-   "sleep_h": 6.27,
-   "sleep_score": 76,
-   "hrv": 120,
-   "hrv_low": 73,
-   "hrv_high": 165,
-   "rhr": 43,
-   "readiness": 25,
-   "acute": 427,
-   "chronic": 294,
-   "weight": null,
-   "hrv_7d": null,
-   "rhr_7d": null,
-   "hrv_base": 93.7
-  },
-  {
    "date": "2026-10-03",
    "sleep_h": 5.33,
    "sleep_score": 37,
@@ -770,8 +754,8 @@
    "acute": 566,
    "chronic": 339,
    "weight": null,
-   "hrv_7d": 87.3,
-   "rhr_7d": 45.3,
+   "hrv_7d": null,
+   "rhr_7d": null,
    "hrv_base": 93.7
   },
   {
@@ -786,8 +770,8 @@
    "acute": 595,
    "chronic": 360,
    "weight": null,
-   "hrv_7d": 86.5,
-   "rhr_7d": 45.8,
+   "hrv_7d": 75.3,
+   "rhr_7d": 46.7,
    "hrv_base": 93.7
   },
   {
@@ -802,8 +786,8 @@
    "acute": 501,
    "chronic": 356,
    "weight": null,
-   "hrv_7d": 90,
-   "rhr_7d": 45.6,
+   "hrv_7d": 82.5,
+   "rhr_7d": 46.2,
    "hrv_base": 93.7
   },
   {
@@ -818,8 +802,8 @@
    "acute": 570,
    "chronic": 382,
    "weight": null,
-   "hrv_7d": 91,
-   "rhr_7d": 45.7,
+   "hrv_7d": 85.2,
+   "rhr_7d": 46.2,
    "hrv_base": 93.7
   },
   {
@@ -834,8 +818,8 @@
    "acute": 460,
    "chronic": 379,
    "weight": null,
-   "hrv_7d": 85.1,
-   "rhr_7d": 46.3,
+   "hrv_7d": 79.3,
+   "rhr_7d": 46.8,
    "hrv_base": 93.7
   },
   {
@@ -1613,38 +1597,47 @@
    "hrv": 104,
    "hrv_low": 70,
    "hrv_high": 154,
-   "rhr": 46,
+   "rhr": 45,
    "readiness": 77,
    "acute": 407,
    "chronic": 531,
    "weight": null,
    "hrv_7d": 98.4,
-   "rhr_7d": 45.6,
+   "rhr_7d": 45.4,
+   "hrv_base": 93.7
+  },
+  {
+   "date": "2026-11-27",
+   "sleep_h": 7.02,
+   "sleep_score": 82,
+   "hrv": 122,
+   "hrv_low": 70,
+   "hrv_high": 154,
+   "rhr": 41,
+   "readiness": 87,
+   "acute": 337,
+   "chronic": 510,
+   "weight": null,
+   "hrv_7d": 101.4,
+   "rhr_7d": 44.7,
    "hrv_base": 93.7
   }
  ],
  "recovery": {
-  "sleep_7d": 6.8,
+  "sleep_7d": 6.7,
   "sleep_base": 7.2,
-  "hrv_7d": 98.4,
+  "hrv_7d": 101.4,
   "hrv_base": 93.7,
-  "rhr_7d": 45.6,
+  "rhr_7d": 44.7,
   "rhr_base": 46.2,
-  "readiness_today": 77,
-  "training_status": "PRODUCTIVE_3",
+  "readiness_today": 87,
+  "training_status": "PEAKING_1",
   "vo2max": 57.9
  },
  "progress": {
   "ref_hr": 140,
   "rest_hr": 46,
   "pmc": [
-   {
-    "date": "2026-07-30",
-    "load": 107,
-    "fitness": 92.0,
-    "fatigue": 90.4,
-    "form": 4.0
-   },
    {
     "date": "2026-07-31",
     "load": 0,
@@ -2477,6 +2470,13 @@
     "fitness": 72.4,
     "fatigue": 61.3,
     "form": 2.6
+   },
+   {
+    "date": "2026-11-27",
+    "load": 0,
+    "fitness": 70.7,
+    "fatigue": 52.6,
+    "form": 11.1
    }
   ],
   "run_pace": [
@@ -2783,11 +2783,11 @@
   "headline": {
    "weeks_back": 6,
    "fitness": {
-    "now": 72.4,
-    "then": 58.4,
-    "change": 14.0
+    "now": 70.7,
+    "then": 67.5,
+    "change": 3.2
    },
-   "form": 2.6,
+   "form": 11.1,
    "run_pace": {
     "now": 318.6,
     "then": 337.6,
